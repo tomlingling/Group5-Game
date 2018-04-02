@@ -22,6 +22,7 @@ public class MyJPanel extends JPanel implements ActionListener
     JButton b2;
     JButton b3;
     JButton b4;
+    JButton b5;
     JLabel label;
     
     public MyJPanel()
@@ -45,11 +46,15 @@ public class MyJPanel extends JPanel implements ActionListener
         b3.addActionListener(this);
         b4 = new JButton("Start Game");
         b4.setBounds(new Rectangle(750,325,250,150));
-        b4.addActionListener(this);         
+        b4.addActionListener(this);
+        b5 = new JButton("Options");
+        b5.setBounds(new Rectangle(800,225,150,50));
+        b5.addActionListener(this);
         add(b1);
         add(b2);
         add(b3);
         add(b4);
+        add(b5);
     }
     
     public void actionPerformed(ActionEvent event)
@@ -86,7 +91,15 @@ public class MyJPanel extends JPanel implements ActionListener
             gamePanel.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             gamePanel.setSize(1420, 1020);        
             gamePanel.setVisible(true);
-        }         
+        } 
+        if (obj == b5)
+        {
+            JFrame gamePanel = new JFrame();
+            gamePanel.add(new CampusMapPanel());
+            gamePanel.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            gamePanel.setSize(800, 640);        
+            gamePanel.setVisible(true);
+        } 
     }
 
 }
