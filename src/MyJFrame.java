@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* IST 240 Team 5
+ * Michael Egnak, , 
+ * Thomas Ling
+ * Melissa Scott
+ * Leonard Cadet
  */
 
 /**

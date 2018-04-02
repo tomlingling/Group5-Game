@@ -22,7 +22,7 @@ public class PSDubois extends JPanel
         super();
         setBackground(Color.yellow);
         b1 = new JButton();
-        b1.setText("This is a place-holder for University Park actions");
+        b1.setText("This is a place-holder for DuBois actions");
         b1.setBounds(new Rectangle(50,50,150,50));
         add(b1);
     }

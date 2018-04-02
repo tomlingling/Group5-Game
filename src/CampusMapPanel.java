@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* IST 240 Team 5
+ * Michael Egnak, , 
+ * Thomas Ling
+ * Melissa Scott
+ * Leonard Cadet
  */
 
 /**
@@ -16,6 +17,7 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 public class CampusMapPanel extends JPanel implements ActionListener
 {
 
+    JButton b0;
     JButton b1;
     JButton b2;
     JButton b3;
@@ -29,35 +31,58 @@ public class CampusMapPanel extends JPanel implements ActionListener
         super();
         setBackground(Color.gray);
         label = new JLabel();
-        ImageIcon image = new ImageIcon("images/TitlePanel.jpg");
+        ImageIcon image = new ImageIcon("images/pennsylvania.jpg");
         label.setIcon(image);
-        label.setBounds(new Rectangle(45,0,150,150));
+        label.setBounds(new Rectangle(0,100,1415,882));
         add(label);
         setLayout(null);
+        //----"Dead" Button---
+        b0 = new JButton("Pick Your Campus"); 
+        b0.setBounds(new Rectangle(550,15,140,55));
+        b0.addActionListener(this);
+        add(b0);
+        //----World Campus---
         b1 = new JButton("World Campus");
-        b1.setBounds(new Rectangle(500,25,150,50));
+        ImageIcon imageB1 = new ImageIcon("images/PSWorld2.jpg");
+        b1.setIcon(imageB1);
+        b1.setBounds(new Rectangle(775,230,140,100));
         b1.addActionListener(this);
-        b2 = new JButton("University Park");
-        b2.setBounds(new Rectangle(500,125,150,50));
-        b2.addActionListener(this);
-        b3 = new JButton("Dubois");
-        b3.setBounds(new Rectangle(500,225,150,50));
-        b3.addActionListener(this);
-        b4 = new JButton("Berks");
-        b4.setBounds(new Rectangle(500,325,150,50));
-        b4.addActionListener(this);
-        b5 = new JButton("Altoona");
-        b5.setBounds(new Rectangle(500,425,150,50));
-        b5.addActionListener(this);
-        b6 = new JButton("Erie");
-        b6.setBounds(new Rectangle(500,525,150,50));
-        b6.addActionListener(this);
         add(b1);
+        //----University Park---
+        b2 = new JButton("University Park");
+        ImageIcon imageB2 = new ImageIcon("images/PSUPark.jpg");
+        b2.setIcon(imageB2);
+        b2.setBounds(new Rectangle(600,500,138,98));        
+        b2.addActionListener(this);
         add(b2);
+        //----DuBois Campus
+        b3 = new JButton("DuBois");
+        ImageIcon imageB3 = new ImageIcon("images/PSDuBois.jpg");
+        b3.setIcon(imageB3);
+        b3.setBounds(new Rectangle(350,325,143,108));
+        b3.addActionListener(this);
         add(b3);
+        //-----Berks Campus---
+        b4 = new JButton("Berks");
+        ImageIcon imageB4 = new ImageIcon("images/PSBerks.jpg");
+        b4.setIcon(imageB4);
+        b4.setBounds(new Rectangle(950,575,140,120));
+        b4.addActionListener(this);
         add(b4);
+        //----Erie Campus---
+        b5 = new JButton("Erie");
+        ImageIcon imageB5 = new ImageIcon("images/PSErie.jpg");
+        b5.setIcon(imageB5);
+        b5.setBounds(new Rectangle(120,150,140,120));
+        b5.addActionListener(this);
         add(b5);
-        add(b6);        
+        //----Altoona Campus---
+        b6 = new JButton("Altoona");
+        ImageIcon imageB6 = new ImageIcon("images/PSAltoona.jpg");
+        b6.setIcon(imageB6);
+        b6.setBounds(new Rectangle(450,550,145,120));
+        b6.addActionListener(this);
+        add(b6);            
     }
 
    
