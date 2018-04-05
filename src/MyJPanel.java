@@ -48,7 +48,7 @@ public class MyJPanel extends JPanel implements ActionListener
         b4.setBounds(new Rectangle(750,325,250,150));
         b4.addActionListener(this);
         b5 = new JButton("Options");
-        b5.setBounds(new Rectangle(800,425,150,50));
+        b5.setBounds(new Rectangle(800,225,150,50));
         b5.addActionListener(this);
         add(b1);
         add(b2);
