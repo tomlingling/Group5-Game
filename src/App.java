@@ -2,7 +2,7 @@
  * Michael Egnak, , 
  * Thomas Ling
  * Melissa Scott
- * Leonard Cadet
+ * Leonard Cadett
  */
 
 //so...this is me...trying GitHub...again....boowahaha!!!!
