@@ -1,8 +1,8 @@
 /* IST 240 Team 5
- * Michael Egnak, , 
- * Thomas Ling
- * Melissa Scott
- * Leonard Cadett omggg work!!!! 
+ * Michael Egnak...I still maintain GitHub sucks , 
+ * Thomas Ling ??????
+ * Melissa Scott...here we go again!!
+ * Leonard Cadett...omggg work!!!! 
  */
 
 public class App {
