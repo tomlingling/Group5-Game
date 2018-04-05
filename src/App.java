@@ -5,7 +5,7 @@
  * Leonard Cadet
  */
 
-//so...this is me...trying GitHub...again....boowahaha!!!!
+//so...this is me...trying GitHub...once again....boowahaha!!!!
 public class App {
 
     /**
