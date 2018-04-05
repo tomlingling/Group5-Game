@@ -5,10 +5,6 @@
  * Leonard Cadett omggg work!!!! 
  */
 
-//so...this is me...trying GitHub...once again....boowahaha!!!!
-//here we go again!!
-//I still maintain GitHub sucks
-
 public class App {
 
     /**

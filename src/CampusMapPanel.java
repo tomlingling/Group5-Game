@@ -30,11 +30,6 @@ public class CampusMapPanel extends JPanel implements ActionListener
     {
         super();
         setBackground(Color.gray);
-        //label = new JLabel();
-        //ImageIcon image = new ImageIcon("images/pennsylvania.jpg");
-        //label.setIcon(image);
-        //label.setBounds(new Rectangle(0,100,1415,882));
-        //add(label);
         setLayout(null);
         //----"Dead" Button---
         b0 = new JButton("Pick Your Campus"); 
