@@ -2,7 +2,7 @@
  * Michael Egnak, , 
  * Thomas Ling
  * Melissa Scott
- * Leonard Cadett omggg work!!!! 
+ * Leonard Cadett 
  */
 
 public class App {
