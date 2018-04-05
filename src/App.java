@@ -4,6 +4,8 @@
  * Melissa Scott
  * Leonard Cadet
  */
+
+//so...this is me...trying GitHub....boowahaha!!!!
 public class App {
 
     /**
