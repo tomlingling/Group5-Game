@@ -12,18 +12,37 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PSAltoona extends JPanel
+public class PSAltoona extends JPanel /** action listener here?*/
 {
 
     JButton b1;
+    JButton b2;
+    JButton b3;
+        
+    String name = "<insert name here>";
+    String game = "<insert game here>";
+    
 
     public PSAltoona()
     {
         super();
-        setBackground(Color.yellow);
+        setBackground(Color.blue);
+        setLayout(null);   
+        //----Welcome Button----
         b1 = new JButton();
-        b1.setText("This is a place-holder for Altoona actions");
-        b1.setBounds(new Rectangle(50,50,150,50));
+        b1.setText("Welcome to Penn State Altoona " + name + ".");
+        b1.setBounds(new Rectangle(125,50,350,50));
         add(b1);
+        //----Game Choice----
+        b2 = new JButton();
+        b2.setText("You have chosen: " + game + ".");
+        b2.setBounds(new Rectangle(125,100,350,50));
+        add(b2);
+        //----Let's Begin----
+        b3 = new JButton();
+        b3.setText("Let's Begin");
+        b3.setBounds(new Rectangle(125,200,350,50));
+        add(b3);
+        /** click button to start game? */          
     }
 }

@@ -1,6 +1,6 @@
 /* IST 240 Team 5
 <<<<<<< HEAD
- * Michael Egnak...I still maintain GitHub sucks , 
+ * Michael Egnak...I still maintain GitHub sucks
  * Thomas Ling ??????
  * Melissa Scott...here we go again!!
  * Leonard Cadett...omggg work!!!! 
