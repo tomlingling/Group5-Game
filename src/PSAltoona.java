@@ -65,6 +65,7 @@ public class PSAltoona extends JPanel implements ActionListener
             b1.setVisible(false);
             b2.setVisible(false);
             b3.setVisible(false);
+            goBack.setVisible(false);
             /** button represents game loading */
             gameGo = new JButton();
             gameGo.setText("Game Go");
