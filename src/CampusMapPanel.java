@@ -23,13 +23,19 @@ public class CampusMapPanel extends JPanel implements ActionListener
     JButton b4;
     JButton b5;
     JButton b6;
+    JButton goToMain;
     JLabel label;
 
     public CampusMapPanel()
     {
         super();
         setBackground(Color.gray);
-        setLayout(null);        
+        setLayout(null);  
+        //----Back to Main Screen---
+        goToMain = new JButton("Back to Main Screen");
+        goToMain.setBounds(new Rectangle(350,30,170,35));
+        goToMain.addActionListener(this);
+        add(goToMain);
         //----World Campus---
         b1 = new JButton("World Campus");
         ImageIcon imageB1 = new ImageIcon("images/PSWorld2.jpg");
