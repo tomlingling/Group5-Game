@@ -16,10 +16,10 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 public class GameOptions extends JPanel implements ActionListener
 {
 
-    JRadioButton rb1 = new JRadioButton("History");
+    JRadioButton rb1 = new JRadioButton("History",true);
     JRadioButton rb2 = new JRadioButton("Math");
     JRadioButton rb3 = new JRadioButton("Geography");
-    //JButton save = new JButton("Save");
+    JButton save = new JButton("Save");
     JLabel namePlayer = new JLabel("Player Name");
     JTextField name = new JTextField("Type Your Name Here",30);
     String gameName;
@@ -44,42 +44,43 @@ public class GameOptions extends JPanel implements ActionListener
         rb3.addActionListener(this);
         //rb1.addActionListener(this);
         name.addActionListener(this);
-        //save.addActionListener(this);        
+        save.addActionListener(this);        
         add(rb1);
         add(rb2);
         add(rb3);
         add(namePlayer);
         add(name);
-        //add(save);
+        add(save);
         
     }
     
     public void actionPerformed(ActionEvent event)
     {
         Object obj = event.getSource();
-        if (obj == name)
-        {
-            playerName = name.getText();
-        }
-        //if (obj == save)
+        if (obj == save)
         {
             if (rb1.isSelected())
             {
                 gameName = "History";
+                playerName = name.getText();
             }
             if (rb2.isSelected())
             {
-                gameName = "Math";              
+                gameName = "Math";
+                playerName = name.getText();          
             }
             if (rb3.isSelected())
             {
-                gameName = "Geography";              
+                gameName = "Geography";
+                playerName = name.getText();               
             }
+            JFrame gamePanel = new JFrame();
+            gamePanel.add(new CampusMapPanel(this));
+            gamePanel.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            gamePanel.setSize(1420, 1020);        
+            gamePanel.setVisible(true);
+            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+            MyJFrame.dispose();
         }
-        JFrame gamePanel = new JFrame();
-        gamePanel.add(new CampusMapPanel());
-        gamePanel.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        gamePanel.setSize(1420, 1020);        
-        gamePanel.setVisible(true);
     }
 }
