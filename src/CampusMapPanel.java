@@ -16,7 +16,7 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class CampusMapPanel extends JPanel implements ActionListener
 {
-    //GameOptions p1;
+    GameOptions p1;
     JButton gameOption;
     String gameLabel;
     JButton b1;
@@ -30,19 +30,31 @@ public class CampusMapPanel extends JPanel implements ActionListener
     JButton timer;
     JLabel label;
     JButton gameName;
+    JButton playerName;    
     String gamePicked = "Test";
+    String nameOfPlayer = "Name";
     
     int counter = 10;
     int delay;
     Timer tim;
     
 
-    public CampusMapPanel ()//(String gamePicked)
+    public CampusMapPanel(GameOptions games)
     {
         super();
+        p1 = games;
         setBackground(Color.gray);
         setLayout(null);  
         //----Name of Game Selected----
+        gamePicked = p1.gameName;
+        gameName = new JButton(gamePicked);
+        gameName.setBounds(new Rectangle(70,50,170,35));
+        add(gameName);
+        //---Player Name----
+        nameOfPlayer = p1.playerName;
+        playerName = new JButton(nameOfPlayer);
+        playerName.setBounds(new Rectangle(120,70,170,35));
+        add(playerName);
         //gameLabel = gamePicked;
         //gameOption = new JButton(gameLabel);
         
