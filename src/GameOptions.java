@@ -16,19 +16,19 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 public class GameOptions extends JPanel implements ActionListener
 {
 
-    JRadioButton rb1 = new JRadioButton("History",true);
+    JRadioButton rb1 = new JRadioButton("History");
     JRadioButton rb2 = new JRadioButton("Math");
     JRadioButton rb3 = new JRadioButton("Geography");
-    JButton save = new JButton("Save");
+    //JButton save = new JButton("Save");
     JLabel namePlayer = new JLabel("Player Name");
-    JTextField name = new JTextField("Player 1",30);
+    JTextField name = new JTextField("Type Your Name Here",30);
     String gameName;
     String playerName;
 
     public GameOptions()
     {
         super();
-        setBackground(Color.yellow);
+        setBackground(Color.darkGray);
         ButtonGroup options = new ButtonGroup();
         options.add(rb1);
         options.add(rb2);
@@ -38,19 +38,19 @@ public class GameOptions extends JPanel implements ActionListener
         rb2.setBounds(175,150,100,30);
         rb3.setBounds(175,250,100,30);
         name.setBounds(100,250,100,30);
-        save.setBounds(300,350,100,30);
+        //save.setBounds(300,350,100,30);
         rb1.addActionListener(this);
         rb2.addActionListener(this);
         rb3.addActionListener(this);
-        rb1.addActionListener(this);
+        //rb1.addActionListener(this);
         name.addActionListener(this);
-        save.addActionListener(this);        
+        //save.addActionListener(this);        
         add(rb1);
         add(rb2);
         add(rb3);
         add(namePlayer);
         add(name);
-        add(save);
+        //add(save);
         
     }
     
@@ -61,7 +61,7 @@ public class GameOptions extends JPanel implements ActionListener
         {
             playerName = name.getText();
         }
-        if (obj == save)
+        //if (obj == save)
         {
             if (rb1.isSelected())
             {
