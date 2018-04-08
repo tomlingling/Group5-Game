@@ -16,9 +16,7 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class CampusMapPanel extends JPanel implements ActionListener
 {
-    GameOptions p1;
-    JButton gameOption;
-    String gameLabel;
+    GameOptions p1;        
     JButton b1;
     JButton b2;
     JButton b3;
@@ -47,29 +45,22 @@ public class CampusMapPanel extends JPanel implements ActionListener
         setLayout(null);  
         //----Name of Game Selected----
         gamePicked = p1.gameName;
-        gameName = new JButton(gamePicked);
-        gameName.setBounds(new Rectangle(70,50,170,35));
+        gameName = new JButton("You have chosen " + gamePicked + " as your option.");
+        gameName.setBounds(new Rectangle(540,30,300,35));
         add(gameName);
         //---Player Name----
         nameOfPlayer = p1.playerName;
-        playerName = new JButton(nameOfPlayer);
-        playerName.setBounds(new Rectangle(120,70,170,35));
-        add(playerName);
-        //gameLabel = gamePicked;
-        //gameOption = new JButton(gameLabel);
-        
-        //gamePicked = p1.gameName;
-        //gameName = new JButton(gamePicked);
-        //gameName.setBounds(new Rectangle(70,50,170,35));
-        //add(gameName);
+        playerName = new JButton("Welcome, " + nameOfPlayer);
+        playerName.setBounds(new Rectangle(250,30,270,35));
+        add(playerName);        
         //----Back to Main Screen---
         goToMain = new JButton("Back to Main Screen");
         goToMain.setBounds(new Rectangle(50,30,170,35));
         goToMain.addActionListener(this);
         add(goToMain);
         //----Time Limit Reminder----
-        timeLimit = new JButton("Pick your campus.  You have <x> minutes to complete the activity!");
-        timeLimit.setBounds(new Rectangle(325,30,700,35));
+        timeLimit = new JButton("Pick your campus to continue.");
+        timeLimit.setBounds(new Rectangle(870,30,250,35));
         add(timeLimit);
         //----Timer Button---
         timer = new JButton("Timer");
