@@ -18,6 +18,8 @@ public class PSAltoona extends JPanel implements ActionListener
     JButton b1;
     JButton b2;
     JButton b3;
+    JButton gameName;
+    JButton playerName;
     JButton goBack;
     JButton gameGo;
         
@@ -30,7 +32,7 @@ public class PSAltoona extends JPanel implements ActionListener
         super();
         setBackground(Color.blue);
         setLayout(null);   
-        //----Welcome Button----
+        //----Welcome Button----          
         b1 = new JButton();
         b1.setText("Welcome to Penn State Altoona " + name + ".");
         b1.setBounds(new Rectangle(125,50,350,50));
@@ -53,8 +55,9 @@ public class PSAltoona extends JPanel implements ActionListener
         goBack.addActionListener(this);
         add(goBack);
     }
+
         
-         public void actionPerformed(ActionEvent event)
+        public void actionPerformed(ActionEvent event)
     {
         Object obj = event.getSource();
         if (obj == b3)

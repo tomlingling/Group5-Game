@@ -25,33 +25,39 @@ public class MyJPanel extends JPanel implements ActionListener
     public MyJPanel()
     {
         super();
-        setBackground(Color.BLUE);
+        setBackground(Color.darkGray);        
+        setLayout(null);
+        //---Instructions--
+        b1 = new JButton("Instructions");
+        b1.setBounds(new Rectangle(200,25,150,50));
+        b1.addActionListener(this);
+        add(b1);
+        //---Game Designers---
+        b2 = new JButton("Game Designers");
+        b2.setBounds(new Rectangle(650,25,150,50));
+        b2.addActionListener(this);
+        add(b2);
+        //-----Tips & Tricks---
+        b3 = new JButton("Tips & Tricks");
+        b3.setBounds(new Rectangle(430,25,150,50));
+        b3.addActionListener(this);
+        add(b3);
+        //b4 = new JButton("Click to select options and start game");
+        //b4.setBounds(new Rectangle(750,300,250,150));
+        //b4.addActionListener(this);
+        //---Go to Options and Start Game---
+        b5 = new JButton("Click Here to Enter");
+        b5.setBounds(new Rectangle(275,425,150,50));
+        b5.setBackground(Color.white);
+        b5.setForeground(Color.black);
+        b5.addActionListener(this);
+        add(b5);
+        //---Panel Background----
         label = new JLabel();
         ImageIcon image = new ImageIcon("images/TitlePanel.jpg");
         label.setIcon(image);
-        label.setBounds(new Rectangle(45,0,682,730));
-        add(label);
-        setLayout(null);
-        b1 = new JButton("Instructions");
-        b1.setBounds(new Rectangle(800,25,150,50));
-        b1.addActionListener(this);
-        b2 = new JButton("Game Designers");
-        b2.setBounds(new Rectangle(800,100,150,50));
-        b2.addActionListener(this);
-        b3 = new JButton("Tips & Tricks");
-        b3.setBounds(new Rectangle(800,175,150,50));
-        b3.addActionListener(this);
-        b4 = new JButton("Click to select options and start game");
-        b4.setBounds(new Rectangle(750,300,250,150));
-        b4.addActionListener(this);
-        b5 = new JButton("Options");
-        b5.setBounds(new Rectangle(800,625,150,50));
-        b5.addActionListener(this);
-        add(b1);
-        add(b2);
-        add(b3);
-        add(b4);
-        add(b5);
+        label.setBounds(new Rectangle(200,10,682,730));
+        add(label);       
     }
     
     public void actionPerformed(ActionEvent event)
@@ -81,14 +87,14 @@ public class MyJPanel extends JPanel implements ActionListener
             tipsTricks.setSize(800, 640);        
             tipsTricks.setVisible(true);
         }
-        if (obj == b4)
+        /**if (obj == b4)
         {
             JFrame gamePanel = new JFrame();
             gamePanel.add(new CampusMapPanel());
             gamePanel.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             gamePanel.setSize(1420, 1020);        
             gamePanel.setVisible(true);
-        } 
+        } */
         if (obj == b5)
         {
             JFrame gameOptions = new JFrame();

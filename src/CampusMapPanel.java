@@ -16,7 +16,7 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class CampusMapPanel extends JPanel implements ActionListener
 {
-    GameOptions p1;
+    GameOptions p1;        
     JButton b1;
     JButton b2;
     JButton b3;
@@ -28,31 +28,46 @@ public class CampusMapPanel extends JPanel implements ActionListener
     JButton timer;
     JLabel label;
     JButton gameName;
+    JButton playerName;
+    JButton difficulty;
     String gamePicked = "Test";
+    String nameOfPlayer = "Name";
+    String difficultySelected = "Normal";
     
     int counter = 10;
     int delay;
     Timer tim;
     
 
-    public CampusMapPanel()
+    public CampusMapPanel(GameOptions games)
     {
         super();
+        p1 = games;
         setBackground(Color.gray);
         setLayout(null);  
         //----Name of Game Selected----
-        //gamePicked = p1.gameName;
-        //gameName = new JButton(gamePicked);
-        //gameName.setBounds(new Rectangle(70,50,170,35));
-        //add(gameName);
+        gamePicked = p1.gameName;
+        gameName = new JButton("You have chosen " + gamePicked + " as your option.");
+        gameName.setBounds(new Rectangle(540,30,300,35));
+        add(gameName);
+        //---Player Name----
+        nameOfPlayer = p1.playerName;
+        playerName = new JButton("Welcome, " + nameOfPlayer);
+        playerName.setBounds(new Rectangle(250,10,270,35));
+        add(playerName);        
+        //----Difficulty Level---
+        difficultySelected = p1.difficulty;
+        difficulty = new JButton("You're level is set to " + difficultySelected);
+        difficulty.setBounds(new Rectangle(250,50,270,35));
+        add(difficulty);
         //----Back to Main Screen---
         goToMain = new JButton("Back to Main Screen");
         goToMain.setBounds(new Rectangle(50,30,170,35));
         goToMain.addActionListener(this);
         add(goToMain);
         //----Time Limit Reminder----
-        timeLimit = new JButton("Pick your campus.  You have <x> minutes to complete the activity!");
-        timeLimit.setBounds(new Rectangle(325,30,700,35));
+        timeLimit = new JButton("Pick your campus to continue.");
+        timeLimit.setBounds(new Rectangle(870,30,250,35));
         add(timeLimit);
         //----Timer Button---
         timer = new JButton("Timer");
