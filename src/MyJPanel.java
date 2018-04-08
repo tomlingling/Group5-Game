@@ -20,7 +20,7 @@ public class MyJPanel extends JPanel implements ActionListener
     JButton b3;
     JButton b4;
     JButton b5;
-    JLabel label;
+    JLabel label;  
     
     public MyJPanel()
     {
@@ -36,16 +36,16 @@ public class MyJPanel extends JPanel implements ActionListener
         b1.setBounds(new Rectangle(800,25,150,50));
         b1.addActionListener(this);
         b2 = new JButton("Game Designers");
-        b2.setBounds(new Rectangle(800,125,150,50));
+        b2.setBounds(new Rectangle(800,100,150,50));
         b2.addActionListener(this);
         b3 = new JButton("Tips & Tricks");
-        b3.setBounds(new Rectangle(800,225,150,50));
+        b3.setBounds(new Rectangle(800,175,150,50));
         b3.addActionListener(this);
-        b4 = new JButton("Start Game");
-        b4.setBounds(new Rectangle(750,325,250,150));
+        b4 = new JButton("Click to select options and start game");
+        b4.setBounds(new Rectangle(750,300,250,150));
         b4.addActionListener(this);
         b5 = new JButton("Options");
-        b5.setBounds(new Rectangle(800,525,150,50));
+        b5.setBounds(new Rectangle(800,625,150,50));
         b5.addActionListener(this);
         add(b1);
         add(b2);
@@ -91,11 +91,11 @@ public class MyJPanel extends JPanel implements ActionListener
         } 
         if (obj == b5)
         {
-            JFrame gamePanel = new JFrame();
-            gamePanel.add(new CampusMapPanel());
-            gamePanel.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-            gamePanel.setSize(800, 640);        
-            gamePanel.setVisible(true);
+            JFrame gameOptions = new JFrame();
+            gameOptions.add(new GameOptions());
+            gameOptions.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            gameOptions.setSize(800, 640);        
+            gameOptions.setVisible(true);
         } 
     }
 
