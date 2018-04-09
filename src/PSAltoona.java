@@ -51,28 +51,25 @@ public class PSAltoona extends JPanel //implements ActionListener
             gameGo.setBounds(new Rectangle(125,300,350,50));
             add(gameGo);                             
         }
-        else if ("History".equals(game))
+        if ("History".equals(game))
         {
             gameGo = new JButton();
             gameGo.setText("When was this campus founded?");
             gameGo.setBounds(new Rectangle(125,300,350,50));
             add(gameGo);                           
         }
-<<<<<<< HEAD
-        if (obj == goBack)
-        {
-            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
-            MyJFrame.dispose();
-=======
-        else if ("Math".equals(game))
+        if ("Math".equals(game))
         {
             gameGo = new JButton();
             gameGo.setText("What percentage of the students are freshman?");
             gameGo.setBounds(new Rectangle(125,300,350,50));
             add(gameGo);                           
->>>>>>> b1c9374f5c68c613bd6a8682e0358e6c4e6ae1e7
         }
-            
+        /*if (obj == goBack)
+        {
+            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+            MyJFrame.dispose();
+        }*/
     }
 }     
  

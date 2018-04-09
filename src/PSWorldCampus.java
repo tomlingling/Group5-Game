@@ -60,15 +60,12 @@ public class PSWorldCampus extends JPanel //implements ActionListener
         }
         else if ("Math".equals(game))
         {
-<<<<<<< HEAD
             JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
             MyJFrame.dispose();
-=======
             gameGo = new JButton();
             gameGo.setText("What percentage of the students are freshman?");
             gameGo.setBounds(new Rectangle(125,300,350,50));
             add(gameGo);                           
->>>>>>> b1c9374f5c68c613bd6a8682e0358e6c4e6ae1e7
         }
             
     }
