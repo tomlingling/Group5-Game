@@ -14,10 +14,12 @@ import java.awt.event.*;
 
 public class PSAltoona extends JPanel implements ActionListener
 {
-
+    GameOptions p1;
     JButton b1;
     JButton b2;
     JButton b3;
+    JButton gameName;
+    JButton playerName;
     JButton goBack;
     JButton gameGo;
         
@@ -25,17 +27,20 @@ public class PSAltoona extends JPanel implements ActionListener
     String game = "<insert game here>";
     
 
-    public PSAltoona()
+    public PSAltoona(GameOptions games)
     {
         super();
+        p1 = games;
         setBackground(Color.blue);
         setLayout(null);   
-        //----Welcome Button----
+        //----Welcome Button---- 
+        name = p1.playerName;
         b1 = new JButton();
         b1.setText("Welcome to Penn State Altoona " + name + ".");
         b1.setBounds(new Rectangle(125,50,350,50));
         add(b1);
         //----Game Choice----
+        game = p1.gameName;
         b2 = new JButton();
         b2.setText("You have chosen: " + game + ".");
         b2.setBounds(new Rectangle(125,100,350,50));
@@ -53,8 +58,9 @@ public class PSAltoona extends JPanel implements ActionListener
         goBack.addActionListener(this);
         add(goBack);
     }
+
         
-         public void actionPerformed(ActionEvent event)
+        public void actionPerformed(ActionEvent event)
     {
         Object obj = event.getSource();
         if (obj == b3)

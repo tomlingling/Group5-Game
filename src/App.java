@@ -8,10 +8,10 @@
  * Michael Egnak, , 
  * Thomas Ling
  * Melissa Scott
- * Leonard Cadett 
+ * Leonard Cadet 
 >>>>>>> 04f7e84118dd53d62738361e13635039802b14bc
  */
-//  comment line to test github...let's try this again
+
 public class App {
 
     /**
