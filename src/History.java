@@ -15,7 +15,7 @@ import java.awt.event.*;
  *
  * @author Len
  */
-public class History extends PSWorldCampus{
+public class History extends JPanel{
        JButton b1;
       
     
@@ -27,7 +27,7 @@ public class History extends PSWorldCampus{
     
     public History()
     
-    {  b1 = new JButton();
+    {   b1 = new JButton();
         b1.setText("Question 1");
         b1.setBounds(new Rectangle(125,50,350,50));
         add(b1);
