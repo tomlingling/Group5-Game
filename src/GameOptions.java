@@ -31,7 +31,7 @@ public class GameOptions extends JPanel implements ActionListener
 
     public GameOptions()
     {
-        super();
+        super();                
         setBackground(Color.darkGray);
         ButtonGroup options = new ButtonGroup();
         options.add(rb1);
