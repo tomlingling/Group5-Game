@@ -11,11 +11,18 @@ import javax.swing.JRadioButton;
  *
  * @author Len
  */
-public class Geography {
+public class Geography 
+{
     JRadioButton rb1 = new JRadioButton("Test1");
     JRadioButton rb2 = new JRadioButton("Test2");
     JRadioButton rb3 = new JRadioButton("Test3");
     JRadioButton rb4 = new JRadioButton("Test4");
+  
     
-    
+    String getQuestion()
+{
+    String subject = "This will be a geography question.";
+    return subject;
 }
+}
+
