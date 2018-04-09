@@ -78,7 +78,8 @@ public class PSWorldCampus extends JPanel implements ActionListener
         }
         if (obj == goBack)
         {
-            //removeAll();
+            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+            MyJFrame.dispose();
         }
             
     }

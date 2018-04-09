@@ -36,7 +36,7 @@ public class PSAltoona extends JPanel implements ActionListener
         //----Welcome Button---- 
         name = p1.playerName;
         b1 = new JButton();
-        b1.setText("Welcome to Penn State Altoona " + name + ".");
+        b1.setText("Welcome to Penn State Altoona, " + name + ".");
         b1.setBounds(new Rectangle(125,50,350,50));
         add(b1);
         //----Game Choice----
@@ -78,9 +78,10 @@ public class PSAltoona extends JPanel implements ActionListener
             gameGo.setBounds(new Rectangle(125,50,350,50));
             add(gameGo);                
         }
-            if (obj == goBack)
+        if (obj == goBack)
         {
-            //removeAll();
+            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+            MyJFrame.dispose();
         }
             
     }
