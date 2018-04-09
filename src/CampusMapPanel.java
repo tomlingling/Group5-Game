@@ -160,7 +160,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b1)
         {            
             JFrame worldCampus = new JFrame();
-            worldCampus.add(new PSWorldCampus());
+            worldCampus.add(new PSWorldCampus(p1));
             worldCampus.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             worldCampus.setSize(600, 480);        
             worldCampus.setVisible(true);
@@ -168,7 +168,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b2)
         {            
             JFrame uPark = new JFrame();
-            uPark.add(new PSUPark());
+            uPark.add(new PSUPark(p1));
             uPark.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             uPark.setSize(600, 480);            
             uPark.setVisible(true);
@@ -176,7 +176,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b3)
         {            
             JFrame dubois = new JFrame();
-            dubois.add(new PSDubois());
+            dubois.add(new PSDubois(p1));
             dubois.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             dubois.setSize(600, 480);         
             dubois.setVisible(true);
@@ -184,7 +184,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b4)
         {            
             JFrame berks = new JFrame();
-            berks.add(new PSBerks());
+            berks.add(new PSBerks(p1));
             berks.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             berks.setSize(600, 480);            
             berks.setVisible(true);
@@ -192,7 +192,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b5)
         {            
             JFrame erie = new JFrame();
-            erie.add(new PSErie());
+            erie.add(new PSErie(p1));
             erie.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             erie.setSize(600, 480);            
             erie.setVisible(true);
@@ -200,7 +200,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b6)
         {            
             JFrame altoona = new JFrame();
-            altoona.add(new PSAltoona());
+            altoona.add(new PSAltoona(p1));
             altoona.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             altoona.setSize(600, 480);            
             altoona.setVisible(true);
