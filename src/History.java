@@ -33,4 +33,5 @@ public class History extends JPanel{
         add(b1);
     
     }
+   
 }
