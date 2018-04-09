@@ -48,30 +48,30 @@ public class CampusMapPanel extends JPanel implements ActionListener
         //----Name of Game Selected----
         gamePicked = p1.gameName;
         gameName = new JButton("You have chosen " + gamePicked + " as your option.");
-        gameName.setBounds(new Rectangle(540,30,300,35));
+        gameName.setBounds(new Rectangle(525,30,300,35));
         add(gameName);
         //---Player Name----
         nameOfPlayer = p1.playerName;
         playerName = new JButton("Welcome, " + nameOfPlayer);
-        playerName.setBounds(new Rectangle(250,10,270,35));
+        playerName.setBounds(new Rectangle(175,30,270,35));
         add(playerName);        
         //----Difficulty Level---
         difficultySelected = p1.difficulty;
         difficulty = new JButton("You're level is set to " + difficultySelected);
-        difficulty.setBounds(new Rectangle(250,50,270,35));
+        difficulty.setBounds(new Rectangle(900,30,270,35));
         add(difficulty);
         //----Back to Main Screen---
-        goToMain = new JButton("Back to Main Screen");
-        goToMain.setBounds(new Rectangle(50,30,170,35));
-        goToMain.addActionListener(this);
-        add(goToMain);
+        //goToMain = new JButton("Back to Main Screen");
+        //goToMain.setBounds(new Rectangle(50,30,170,35));
+        //goToMain.addActionListener(this);
+        //add(goToMain);
         //----Time Limit Reminder----
         timeLimit = new JButton("Pick your campus to continue.");
-        timeLimit.setBounds(new Rectangle(870,30,250,35));
+        timeLimit.setBounds(new Rectangle(550,130,250,35));
         add(timeLimit);
         //----Timer Button---
         timer = new JButton("Timer");
-        timer.setBounds(new Rectangle(1140,30,170,35));
+        timer.setBounds(new Rectangle(1000,280,170,170));
         add(timer);        
         //----World Campus---
         b1 = new JButton("World Campus");
@@ -122,9 +122,22 @@ public class CampusMapPanel extends JPanel implements ActionListener
         label.setBounds(new Rectangle(0,100,1415,882));
         add(label);
         //----keep the timer moving-----------
-  		
-                delay = 1000; //milliseconds
-  		tim = new Timer(delay, this);
+  	if (difficultySelected == ("Easy"))
+        {	
+            delay = 5000; //milliseconds
+            tim = new Timer(delay, this);
+        }
+        else if (difficultySelected == ("Medium"))
+        {
+            delay = 1000; //milliseconds
+            tim = new Timer(delay, this);
+        } 
+        else if (difficultySelected == ("Hard"))
+        {
+            delay = 500;  //milliseconds
+            tim = new Timer(delay, this);
+        }
+        
         
     }
 
@@ -147,7 +160,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b1)
         {            
             JFrame worldCampus = new JFrame();
-            worldCampus.add(new PSWorldCampus());
+            worldCampus.add(new PSWorldCampus(p1));
             worldCampus.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             worldCampus.setSize(600, 480);        
             worldCampus.setVisible(true);
@@ -155,7 +168,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b2)
         {            
             JFrame uPark = new JFrame();
-            uPark.add(new PSUPark());
+            uPark.add(new PSUPark(p1));
             uPark.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             uPark.setSize(600, 480);            
             uPark.setVisible(true);
@@ -163,7 +176,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b3)
         {            
             JFrame dubois = new JFrame();
-            dubois.add(new PSDubois());
+            dubois.add(new PSDubois(p1));
             dubois.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             dubois.setSize(600, 480);         
             dubois.setVisible(true);
@@ -171,7 +184,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b4)
         {            
             JFrame berks = new JFrame();
-            berks.add(new PSBerks());
+            berks.add(new PSBerks(p1));
             berks.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             berks.setSize(600, 480);            
             berks.setVisible(true);
@@ -179,7 +192,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b5)
         {            
             JFrame erie = new JFrame();
-            erie.add(new PSErie());
+            erie.add(new PSErie(p1));
             erie.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             erie.setSize(600, 480);            
             erie.setVisible(true);
@@ -187,7 +200,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         if (obj == b6)
         {            
             JFrame altoona = new JFrame();
-            altoona.add(new PSAltoona());
+            altoona.add(new PSAltoona(p1));
             altoona.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             altoona.setSize(600, 480);            
             altoona.setVisible(true);

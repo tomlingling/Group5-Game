@@ -14,7 +14,7 @@ import java.awt.event.*;
 
 public class PSUPark extends JPanel implements ActionListener
 {
-
+    GameOptions p1;
     JButton b1;
     JButton b2;
     JButton b3;
@@ -25,18 +25,21 @@ public class PSUPark extends JPanel implements ActionListener
     String game = "<insert game here>";
     
 
-    public PSUPark()
+    public PSUPark(GameOptions games)
     {
         super();
+        p1 = games;        
         setBackground(Color.white);
         setLayout(null);   
         //----Welcome Button----
         b1 = new JButton();
+        name = p1.playerName;        
         b1.setText("Welcome to University Park " + name + ".");
         b1.setBounds(new Rectangle(125,50,350,50));
         add(b1);
         //----Game Choice----
         b2 = new JButton();
+        game = p1.gameName;        
         b2.setText("You have chosen: " + game + ".");
         b2.setBounds(new Rectangle(125,100,350,50));
         add(b2);
