@@ -16,7 +16,7 @@ import java.awt.event.*;
  * @author Len
  */
 public class History extends JPanel{
-       JButton b1;
+    JButton b1;
       
     
     
@@ -25,7 +25,7 @@ public class History extends JPanel{
     JRadioButton rb3 = new JRadioButton("Test3");
     JRadioButton rb4 = new JRadioButton("Test4");
     
-    public History()
+    public History(GameOptions games)
     
     {   b1 = new JButton();
         b1.setText("Question 1");

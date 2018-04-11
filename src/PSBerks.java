@@ -73,8 +73,10 @@ public class PSBerks extends JPanel implements ActionListener
             gameGo = new JButton();
             gameGo.setText("Game Go");
             gameGo.setBounds(new Rectangle(125,50,350,50));
-            add(gameGo);              
-        }
+            add(gameGo); 
+           // if ( name == "History")
+                  //  {
+        //}
         if (obj == goBack)
         {
             //removeAll();
