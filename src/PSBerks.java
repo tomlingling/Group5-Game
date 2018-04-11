@@ -54,7 +54,7 @@ public class PSBerks extends JPanel //implements ActionListener
         else if ("History".equals(game))
         {
             gameGo = new JButton();
-<<<<<<< HEAD
+
             gameGo.setText("Game Go");
             gameGo.setBounds(new Rectangle(125,50,350,50));
             add(gameGo); 
@@ -62,13 +62,13 @@ public class PSBerks extends JPanel //implements ActionListener
                   //  {
         //}
         if (obj == goBack)
-=======
+
             gameGo.setText("When was this campus founded?");
             gameGo.setBounds(new Rectangle(125,300,350,50));
             add(gameGo);                           
         }
         else if ("Math".equals(game))
->>>>>>> 47e3e31211f63b41b6186899110226dd5183bc86
+
         {
             gameGo = new JButton();
             gameGo.setText("What percentage of the students are freshman?");
