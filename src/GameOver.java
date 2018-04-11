@@ -12,7 +12,7 @@ import java.awt.event.*;
 
 // This is a place holder until we know when to use this text screen in our game
 
-public class GameOver extends PSWorldCampus {
+public class GameOver extends JPanel {
     
     JTextArea b1;
 
