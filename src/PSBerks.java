@@ -54,15 +54,6 @@ public class PSBerks extends JPanel //implements ActionListener
         else if ("History".equals(game))
         {
             gameGo = new JButton();
-
-            gameGo.setText("Game Go");
-            gameGo.setBounds(new Rectangle(125,50,350,50));
-            add(gameGo); 
-           // if ( name == "History")
-                  //  {
-        //}
-        if (obj == goBack)
-
             gameGo.setText("When was this campus founded?");
             gameGo.setBounds(new Rectangle(125,300,350,50));
             add(gameGo);                           
