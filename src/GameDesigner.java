@@ -26,13 +26,29 @@ public class GameDesigner extends JPanel
         setBackground(Color.darkGray);
         
         x = 300;
-        y = 700;
+        y = 200;
         header = "scrolling";
         setSize(400,300);
     }    
         @Override
         public void paint(Graphics g){
-        g.drawString(header, x, y);
+            g.setColor(Color.white);
+            g.fillRect(0, 0, 400, 300);
+            g.setColor(Color.black);        
+            g.drawString(header, x, y);
+        }
+        
+        public void start() throws InterruptedException
+        {
+            while(true){
+                while (y > 10)
+                {
+                    x = getWidth();
+                    y--;
+                    repaint();
+                    Thread.sleep(10);
+                }
+            }
         }
         
         
