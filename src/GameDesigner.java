@@ -8,7 +8,7 @@ import java.io.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
-public class GameDesigner extends JPanel
+/*public class GameDesigner extends JPanel
 {
 
     JButton b1;
@@ -17,7 +17,6 @@ public class GameDesigner extends JPanel
     {
         super();
         setBackground(Color.darkGray);
-<<<<<<< HEAD
         
         x = 300;
         y = 200;
@@ -46,7 +45,6 @@ public class GameDesigner extends JPanel
         }
         
         
-=======
         //----placeholder buttons----
         b1 = new JButton();
         b1.setText("This is a place-holder for game designers");
@@ -54,7 +52,6 @@ public class GameDesigner extends JPanel
         add(b1);
         playMusic("20Fox.wav");
     }    
->>>>>>> bbdb29b57ddd9302301517908cee4be15585bf80
         
         //----play music....thank you StackOverflow & YouTube!!!----
     public static void playMusic(String filepath)
@@ -74,3 +71,4 @@ public class GameDesigner extends JPanel
         }
     }       
 }
+*/
