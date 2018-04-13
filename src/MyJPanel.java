@@ -9,6 +9,8 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import sun.audio.*;
+import java.io.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
@@ -26,7 +28,8 @@ public class MyJPanel extends JPanel implements ActionListener
     {
         super();
         setBackground(Color.darkGray);        
-        setLayout(null);
+        setLayout(null);    
+        playMusic("Win95.wav");
         //---Instructions--
         b1 = new JButton("Instructions");
         b1.setBounds(new Rectangle(200,25,150,50));
@@ -57,7 +60,24 @@ public class MyJPanel extends JPanel implements ActionListener
         ImageIcon image = new ImageIcon("images/TitlePanel.jpg");
         label.setIcon(image);
         label.setBounds(new Rectangle(200,10,682,730));
-        add(label);       
+        add(label);         
+    }
+    //----play music....thank you StackOverflow & YouTube!!!----
+    public static void playMusic(String filepath)
+    {
+        InputStream music;
+        try
+        {
+            music = new FileInputStream(new File(filepath));
+            AudioStream audio = new AudioStream(music);
+            AudioPlayer.player.start(audio);
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "error");
+            
+        }
     }
     
     public void actionPerformed(ActionEvent event)

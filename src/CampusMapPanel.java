@@ -9,9 +9,13 @@
  *
  * @author Mikee
  */
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import sun.audio.*;
+import java.io.*;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class CampusMapPanel extends JPanel implements ActionListener
@@ -45,6 +49,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         p1 = games;
         setBackground(Color.gray);
         setLayout(null);  
+        playMusic("GreenHill.wav");
         //----Name of Game Selected----
         gamePicked = p1.gameName;
         gameName = new JButton("You have chosen " + gamePicked + " as your option.");
@@ -140,7 +145,23 @@ public class CampusMapPanel extends JPanel implements ActionListener
         
         
     }
-
+    //----play music....thank you StackOverflow & YouTube!!!----
+    public static void playMusic(String filepath)
+    {
+        InputStream music;
+        try
+        {
+            music = new FileInputStream(new File(filepath));
+            AudioStream audio = new AudioStream(music);
+            AudioPlayer.player.start(audio);
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "error");
+            
+        }
+    }       
    
     public void actionPerformed(ActionEvent event)
     {
@@ -155,6 +176,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
                     tim.stop();
                     timer.setBackground(Color.red);
                     timer.setText("OUT OF TIME!!");
+                    playMusic("TimeOut.wav");
                     counter = 10;
                 }
         if (obj == b1)
