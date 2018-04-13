@@ -8,7 +8,7 @@ import java.beans.*;
 public class InstructPanel extends JPanel implements ActionListener
 {
     XML_240 x2;
-      
+    String instructions = "";
 
     JButton b1;
     JButton b2;
@@ -26,10 +26,7 @@ public class InstructPanel extends JPanel implements ActionListener
         b2.setText("Back to Main Screen");
         b2.setBounds(new Rectangle(550,550,150,50));
         b2.addActionListener(this);
-        add(b1);
-        add(b2);
-        x2.openInstructions("InstructPanel.xml");
-        x2.closeReaderXML();        
+        add(b1);    
 
     }
     
@@ -38,17 +35,13 @@ public class InstructPanel extends JPanel implements ActionListener
         Object obj = event.getSource();
         if (obj == b1)
         {
-
-            b1.setVisible(false);
-            b2.setVisible(false);
             setBackground(Color.blue);
             
-            String s1 = ""; 
             x2.openReaderXML("InstructPanel.xml");
-            s1 = (String) x2.ReadObject();
+            instructions = (String) x2.ReadObject();
             x2.closeReaderXML();
-            JButton b3 = new JButton("contents of s1 = " + s1);
-            add(b3);
+            b1.setText(instructions);
+            add(b2);
         }    
             
 

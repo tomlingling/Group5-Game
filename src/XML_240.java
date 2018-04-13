@@ -63,19 +63,6 @@ public class XML_240
 
 //==========================================================================
 
-    public void openInstructions(String filename)
-    {
-        try
-        {
-            de = new XMLDecoder(new BufferedInputStream(new FileInputStream("InstructPanel.xml")));
-        } catch (Exception xx)
-        {
-            xx.printStackTrace();
-        }
-    }    
-
-//==========================================================================
-
     public void openWriterXML(String filename)
     {
         try
