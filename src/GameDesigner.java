@@ -1,46 +1,45 @@
 
+
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.JPanel;
 import java.awt.event.*;
+import sun.audio.*;
+import java.io.*;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class GameDesigner extends JPanel
 {
 
-    //JButton b1;
-    int x;
-    int y;
-    int count;
-    
-    String header;
-    String team1;
-    String team2;
-    String team3;
-    String team4;
-            
-    
-
+    JButton b1;
+                
     public GameDesigner()
     {
         super();
         setBackground(Color.darkGray);
-        
-        x = 300;
-        y = 700;
-        header = "scrolling";
-        setSize(400,300);
+        //----placeholder buttons----
+        b1 = new JButton();
+        b1.setText("This is a place-holder for game designers");
+        b1.setBounds(new Rectangle(50,50,150,50));
+        add(b1);
+        playMusic("20Fox.wav");
     }    
-        @Override
-        public void paint(Graphics g){
-        g.drawString(header, x, y);
+        
+        //----play music....thank you StackOverflow & YouTube!!!----
+    public static void playMusic(String filepath)
+    {
+        InputStream music;
+        try
+        {
+            music = new FileInputStream(new File(filepath));
+            AudioStream audio = new AudioStream(music);
+            AudioPlayer.player.start(audio);
+            
         }
-        
-        
-        
-        
-        //b1 = new JButton();
-        //b1.setText("This is a place-holder for game designers");
-        //b1.setBounds(new Rectangle(50,50,150,50));
-        //add(b1);
-    
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "error");
+            
+        }
+    }       
 }
