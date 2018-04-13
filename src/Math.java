@@ -1,4 +1,5 @@
 
+import javax.swing.JButton;
 import javax.swing.JRadioButton;
 
 /*
@@ -11,12 +12,18 @@ import javax.swing.JRadioButton;
  *
  * @author Len
  */
+import javax.swing.JLabel;
 public class Math 
 {
-    JRadioButton rb1 = new JRadioButton("Test1");
-    JRadioButton rb2 = new JRadioButton("Test2");
-    JRadioButton rb3 = new JRadioButton("Test3");
-    JRadioButton rb4 = new JRadioButton("Test4");
+    JButton b1;
+      
+    JLabel label = new JLabel ("Math Question 1");
+    JLabel label2 = new JLabel ("Count the number of letters of the campus name, divde by 2 and multipe by 5 what is the answer?");
+    
+    JButton button1 = new JButton("200");
+    JButton button2 = new JButton("240");
+    JButton button3 = new JButton("300");
+    JButton button4 = new JButton("350");
     
 String getQuestion()
 {
