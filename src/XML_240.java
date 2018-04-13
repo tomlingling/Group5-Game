@@ -59,6 +59,22 @@ public class XML_240
             xx.printStackTrace();
         }
     }
+<<<<<<< HEAD
+=======
+
+//==========================================================================
+
+    public void openInstructions(String filename)
+    {
+        try
+        {
+            de = new XMLDecoder(new BufferedInputStream(new FileInputStream("InstructPanel.xml")));
+        } catch (Exception xx)
+        {
+            xx.printStackTrace();
+        }
+    }    
+>>>>>>> e64db2314cd271e627a5418d6fb1d290b676fd64
 //==========================================================================
 
     public void openWriterXML(String filename)
