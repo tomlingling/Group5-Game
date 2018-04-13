@@ -49,7 +49,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         p1 = games;
         setBackground(Color.gray);
         setLayout(null);  
-        playMusic("GreenHill.wav");
+        playMusic("Win95.wav");
         //----Name of Game Selected----
         gamePicked = p1.gameName;
         gameName = new JButton("You have chosen " + gamePicked + " as your option.");

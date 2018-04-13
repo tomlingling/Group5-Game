@@ -1,16 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Mikee
- */
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import sun.audio.*;
+import java.io.*;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class GameOptions extends JPanel implements ActionListener
@@ -22,8 +16,9 @@ public class GameOptions extends JPanel implements ActionListener
     JRadioButton rb4 = new JRadioButton("Easy",true);
     JRadioButton rb5 = new JRadioButton("Medium");
     JRadioButton rb6 = new JRadioButton("Hard");    
-    JButton save = new JButton("Save");
-    JLabel namePlayer = new JLabel("Player Name");
+    JButton subject = new JButton("Select Your Subject");
+    JButton difficult = new JButton("Select Your Difficulty");
+    JButton save = new JButton("Click Here to Begin!");    
     JTextField name = new JTextField("Type Your Name Here",30);
     String gameName;
     String playerName;
@@ -33,42 +28,57 @@ public class GameOptions extends JPanel implements ActionListener
     {
         super();                
         setBackground(Color.darkGray);
+        playMusic("GreenHill.wav");
+        setLayout(new GridLayout(6,2,5,31));
+        
+        //---Options Buttons----
+        add(subject);        
         ButtonGroup options = new ButtonGroup();
         options.add(rb1);
         options.add(rb2);
         options.add(rb3);
+        //-----Difficulty Buttons-----
+        add(difficult);        
         ButtonGroup difficulty = new ButtonGroup();
         difficulty.add(rb4);
         difficulty.add(rb5);
         difficulty.add(rb6);        
-
-        rb1.setBounds(175,50,100,30);
-        rb2.setBounds(175,150,100,30);
-        rb3.setBounds(175,250,100,30);
-        rb4.setBounds(275,50,100,30);
-        rb5.setBounds(275,150,100,30);
-        rb6.setBounds(275,250,100,30);        
-        name.setBounds(100,250,100,30);
-        //save.setBounds(300,350,100,30);
+        //----Assign Action Listeners-----        
         rb1.addActionListener(this);
         rb2.addActionListener(this);
         rb3.addActionListener(this);
         rb4.addActionListener(this);
         rb5.addActionListener(this);
-        rb6.addActionListener(this);        
-        //rb1.addActionListener(this);
+        rb6.addActionListener(this);                
         name.addActionListener(this);
-        save.addActionListener(this);        
+        save.addActionListener(this);  
+        //----Add All Buttons-----
         add(rb1);
-        add(rb2);
-        add(rb3);
         add(rb4);
+        add(rb2);
         add(rb5);
-        add(rb6);        
-        add(namePlayer);
+        add(rb3);       
+        add(rb6);                
         add(name);
-        add(save);
-        
+        add(save);        
+    }
+    
+    //----play music....thank you StackOverflow & YouTube!!!----
+    public static void playMusic(String filepath)
+    {
+        InputStream music;
+        try
+        {
+            music = new FileInputStream(new File(filepath));
+            AudioStream audio = new AudioStream(music);
+            AudioPlayer.player.start(audio);
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "error");
+            
+        }
     }
     
     public void actionPerformed(ActionEvent event)

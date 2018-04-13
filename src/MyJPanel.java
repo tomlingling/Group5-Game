@@ -50,9 +50,7 @@ public class MyJPanel extends JPanel implements ActionListener
         //b4.addActionListener(this);
         //---Go to Options and Start Game---
         b5 = new JButton("Click Here to Enter");
-        b5.setBounds(new Rectangle(275,425,150,50));
-        b5.setBackground(Color.white);
-        b5.setForeground(Color.black);
+        b5.setBounds(new Rectangle(275,425,150,50));       
         b5.addActionListener(this);
         add(b5);
         //---Panel Background----
