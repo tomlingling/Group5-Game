@@ -30,11 +30,11 @@ public class CampusMapPanel extends JPanel implements ActionListener
     {
         super();
         setBackground(Color.gray);
-        label = new JLabel();
-        ImageIcon image = new ImageIcon("images/pennsylvania.jpg");
-        label.setIcon(image);
-        label.setBounds(new Rectangle(0,100,1415,882));
-        add(label);
+        //label = new JLabel();
+        //ImageIcon image = new ImageIcon("images/pennsylvania.jpg");
+        //label.setIcon(image);
+        //label.setBounds(new Rectangle(0,100,1415,882));
+        //add(label);
         setLayout(null);
         //----"Dead" Button---
         b0 = new JButton("Pick Your Campus"); 
@@ -82,7 +82,13 @@ public class CampusMapPanel extends JPanel implements ActionListener
         b6.setIcon(imageB6);
         b6.setBounds(new Rectangle(450,550,145,120));
         b6.addActionListener(this);
-        add(b6);            
+        add(b6);   
+        label = new JLabel();
+        ImageIcon image = new ImageIcon("images/pennsylvania.jpg");
+        label.setIcon(image);
+        label.setBounds(new Rectangle(0,100,1415,882));
+        add(label);
+        
     }
 
    
