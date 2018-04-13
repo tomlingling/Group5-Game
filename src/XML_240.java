@@ -59,8 +59,7 @@ public class XML_240
             xx.printStackTrace();
         }
     }
-<<<<<<< HEAD
-=======
+
 
 //==========================================================================
 
@@ -74,7 +73,7 @@ public class XML_240
             xx.printStackTrace();
         }
     }    
->>>>>>> e64db2314cd271e627a5418d6fb1d290b676fd64
+
 //==========================================================================
 
     public void openWriterXML(String filename)
