@@ -27,6 +27,7 @@ public class InstructPanel extends JPanel implements ActionListener
         b2.setBounds(new Rectangle(550,550,150,50));
         b2.addActionListener(this);
         add(b1);    
+        add(b2);
 
     }
     
