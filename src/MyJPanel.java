@@ -20,8 +20,7 @@ public class MyJPanel extends JPanel implements ActionListener
     JButton b1;
     JButton b2;
     JButton b3;
-    JButton b4;
-    JButton b5;
+    JButton b4;    
     JLabel label;  
     
     public MyJPanel()
@@ -44,17 +43,13 @@ public class MyJPanel extends JPanel implements ActionListener
         b3 = new JButton("Tips & Tricks");
         b3.setBounds(new Rectangle(430,25,150,50));
         b3.addActionListener(this);
-        add(b3);
-        //b4 = new JButton("Click to select options and start game");
-        //b4.setBounds(new Rectangle(750,300,250,150));
-        //b4.addActionListener(this);
-        //---Go to Options and Start Game---
-        b5 = new JButton("Click Here to Enter");
-        b5.setBounds(new Rectangle(275,425,150,50));
-        b5.setBackground(Color.white);
-        b5.setForeground(Color.black);
-        b5.addActionListener(this);
-        add(b5);
+        add(b3);        
+        b4 = new JButton("Click Here to Enter");
+        b4.setBounds(new Rectangle(275,425,150,50));
+        b4.setBackground(Color.white);
+        b4.setForeground(Color.black);
+        b4.addActionListener(this);
+        add(b4);
         //---Panel Background----
         label = new JLabel();
         ImageIcon image = new ImageIcon("images/TitlePanel.jpg");
