@@ -2,6 +2,6 @@
 
 <java class="java.beans.XMLDecoder" version="1.8.0_144">
 
-<string>These are the text instructions for Group 5's Game.  Information for this panel can be found in the XML document entitled instructpanel.xml.</string>
+<string>These are the text instructions for Group 5's Game.  Information for this panel can be found in the XML document entitled InstructPanel.xml.</string>
 
 </java>

@@ -28,7 +28,7 @@ public class MyJPanel extends JPanel implements ActionListener
         super();
         setBackground(Color.darkGray);        
         setLayout(null);    
-        playMusic("Win95.wav");
+        playMusic("Defeat.wav");
         //---Instructions--
         b1 = new JButton("Instructions");
         b1.setBounds(new Rectangle(200,25,150,50));
@@ -43,6 +43,7 @@ public class MyJPanel extends JPanel implements ActionListener
         b3 = new JButton("Tips & Tricks");
         b3.setBounds(new Rectangle(430,25,150,50));
         b3.addActionListener(this);
+<<<<<<< HEAD
         add(b3);        
         b4 = new JButton("Click Here to Enter");
         b4.setBounds(new Rectangle(275,425,150,50));
@@ -50,6 +51,27 @@ public class MyJPanel extends JPanel implements ActionListener
         b4.setForeground(Color.black);
         b4.addActionListener(this);
         add(b4);
+=======
+
+        b4 = new JButton("Start Game");
+        b4.setBounds(new Rectangle(750,325,250,150));
+        b4.addActionListener(this);
+        b5 = new JButton("Options");
+        b5.setBounds(new Rectangle(800,225,150,50));
+        b5.addActionListener(this);
+        add(b1);
+        add(b2);
+
+        add(b3);
+        //b4 = new JButton("Click to select options and start game");
+        //b4.setBounds(new Rectangle(750,300,250,150));
+        //b4.addActionListener(this);
+        //---Go to Options and Start Game---
+        b5 = new JButton("Click Here to Enter");
+        b5.setBounds(new Rectangle(275,425,150,50));       
+        b5.addActionListener(this);
+        add(b5);
+>>>>>>> 44554aba7b3eddb1b54d4c7d436192df6f4578a4
         //---Panel Background----
         label = new JLabel();
         ImageIcon image = new ImageIcon("images/TitlePanel.jpg");

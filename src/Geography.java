@@ -1,4 +1,6 @@
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 
 /*
@@ -13,11 +15,15 @@ import javax.swing.JRadioButton;
  */
 public class Geography 
 {
-    JRadioButton rb1 = new JRadioButton("Test1");
-    JRadioButton rb2 = new JRadioButton("Test2");
-    JRadioButton rb3 = new JRadioButton("Test3");
-    JRadioButton rb4 = new JRadioButton("Test4");
-  
+      JButton b1;
+      
+    JLabel label = new JLabel ("Geography Question 1");
+    JLabel label2 = new JLabel ("If you start from the Center of PA what location is these campus?");
+    
+    JButton button1 = new JButton("North");
+    JButton button2 = new JButton("East");
+    JButton button3 = new JButton("West");
+    JButton button4 = new JButton("South");
     
     String getQuestion()
 {

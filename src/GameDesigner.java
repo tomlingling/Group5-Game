@@ -8,10 +8,11 @@ import java.io.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
-public class GameDesigner extends JPanel
+public class GameDesigner extends JPanel implements ActionListener
 {
 
     JButton b1;
+    JButton b2;
                 
     public GameDesigner()
     {
@@ -19,12 +20,17 @@ public class GameDesigner extends JPanel
         setBackground(Color.darkGray);
         //----placeholder buttons----
         b1 = new JButton();
-        b1.setText("This is a place-holder for game designers");
-        b1.setBounds(new Rectangle(50,50,150,50));
+        ImageIcon imageButton = new ImageIcon("images/GameDesign.jpg"); 
+        b1.setIcon(imageButton);                    
         add(b1);
         playMusic("20Fox.wav");
+        b2 = new JButton();
+        b2.setText("Back to Main Screen");
+        b2.setBounds(new Rectangle(550,550,150,50));
+        b2.addActionListener(this);
+        add(b2);
     }    
-        
+
         //----play music....thank you StackOverflow & YouTube!!!----
     public static void playMusic(String filepath)
     {
@@ -41,5 +47,15 @@ public class GameDesigner extends JPanel
             JOptionPane.showMessageDialog(null, "error");
             
         }
-    }       
+    }
+    
+    public void actionPerformed(ActionEvent event)
+    {
+        Object obj = event.getSource();
+        if (obj == b2)
+        {
+            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+            MyJFrame.dispose();            
+        }
+    }
 }
