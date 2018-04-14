@@ -35,7 +35,7 @@ public class History extends JPanel implements ActionListener{
     public History (GameOptions games){
     super(); 
         p1 = games; 
-        setBackground(Color.BLUE);
+        setBackground(Color.YELLOW);
         setLayout(null);
         h1 = new JButton("What year was this Campus found?");
         h1.setBounds(new Rectangle(525,30,300,35));

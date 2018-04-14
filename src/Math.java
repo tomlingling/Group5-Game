@@ -66,7 +66,7 @@ public class Math extends JPanel //implements ActionListener
         p1 = games; 
         setBackground(Color.GREEN);
         setLayout(null);
-        m1 = new JButton("What year was this Campus found?");
+        m1 = new JButton("Add the letters of the campus name and multiple by 9, what is the number?");
         m1.setBounds(new Rectangle(525,30,300,35));
         add(m1);
         
