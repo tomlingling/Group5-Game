@@ -57,12 +57,35 @@ public class PSWorldCampus extends JPanel implements ActionListener
         JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
         MyJFrame.dispose();    
         
-        JFrame question = new JFrame();        
+        if (game=="History"){
+        JFrame question = new JFrame();
+        question.add(new History(p1));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         question.setSize(800, 640);        
         question.setVisible(true);
+        }
+        
+        if (game=="Math"){
+        JFrame question = new JFrame();
+        question.add(new Math(p1));
+        setBackground(Color.darkGray);        
+        setLayout(null);    
+        question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        question.setSize(800, 640);        
+        question.setVisible(true);
+        }
+        
+        if (game=="Geography"){
+        JFrame question = new JFrame();
+        question.add(new History(p1));
+        setBackground(Color.darkGray);        
+        setLayout(null);    
+        question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        question.setSize(800, 640);        
+        question.setVisible(true);
+        }
     }    
         
         

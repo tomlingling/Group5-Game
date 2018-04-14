@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.6.0_65" class="java.beans.XMLDecoder"> 
+<string>Where is this campus located?</string> 
+<string>On a computer in a hacker's basement bedroom</string>
+<string>Anywhere with an internet connection</string> 
+<string>Wherever the Millenium Falcon takes it</string> 
+<string>The 12th realm of the Quasar system</string>
+</java> 
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+    
+</root>
