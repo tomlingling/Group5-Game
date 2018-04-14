@@ -1,4 +1,5 @@
 
+import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
 
@@ -24,6 +25,33 @@ public class Math
     JButton button2 = new JButton("240");
     JButton button3 = new JButton("300");
     JButton button4 = new JButton("350");
+    JButton button5 = new JButton("650");
+    JButton button6 = new JButton("450");
+    
+       public void actionperformed(ActionEvent event){
+       if (button1.isSelected()){
+           button1.setText("Wrong!");
+       }
+       if (button2.isSelected()){
+          button2.setText("Wrong!"); 
+       }
+      if (button3.isSelected()){
+           button3.setText("Wrong!");
+       }
+       if (button4.isSelected()){
+           button4.setText("Wrong!");
+       }
+       if (button5.isSelected()){
+           button5.setText("Wrong!");
+       }
+       if (button6.isSelected()){
+           button6.setText("Right!");
+       }
+     
+           
+           
+           
+   } 
     
 String getQuestion()
 {
