@@ -13,7 +13,7 @@ public class History extends JPanel{
     JLabel label2 = new JLabel ("What year was this Campus found?");
     
     JButton button1 = new JButton("1900");
-    JButton button2 = new JButton("1910");
+    JButton button2 = new JButton("1910"); 
     JButton button3 = new JButton("1920");
     JButton button4 = new JButton("1930");
     JButton button5 = new JButton("1950");
