@@ -11,8 +11,9 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
-public class PSBerks extends JPanel //implements ActionListener
+public class PSBerks extends JPanel implements ActionListener
 {
     GameOptions p1;
     JButton b1;
@@ -43,29 +44,56 @@ public class PSBerks extends JPanel //implements ActionListener
         b2.setText("You have chosen: " + game + ".");
         b2.setBounds(new Rectangle(125,100,350,50));
         add(b2);
-        //----Show the Question----
-        if ("Geography".equals(game))
-        {          
-            gameGo = new JButton();
-            gameGo.setText("Where is this campus located?");
-            gameGo.setBounds(new Rectangle(125,300,350,50));
-            add(gameGo);                             
+               //----Show the Question----
+        gameGo = new JButton();
+        gameGo.setText("Click to Begin");
+        gameGo.setBounds(new Rectangle(125, 300, 350,50));
+        gameGo.addActionListener(this);
+        add(gameGo);
+                       
         }
-        else if ("History".equals(game))
-        {
-            gameGo = new JButton();
-            gameGo.setText("When was this campus founded?");
-            gameGo.setBounds(new Rectangle(125,300,350,50));
-            add(gameGo);                           
+     public void actionPerformed(ActionEvent event)
+    {
+        Object obj = event.getSource();
+        JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+        MyJFrame.dispose();    
+        
+        if (game=="History"){
+        JFrame question = new JFrame();
+        question.add(new History(p1));
+        setBackground(Color.darkGray);        
+        setLayout(null);    
+        question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        question.setSize(800, 640);        
+        question.setVisible(true);
         }
-        else if ("Math".equals(game))
-
-        {
-            gameGo = new JButton();
-            gameGo.setText("What percentage of the students are freshman?");
-            gameGo.setBounds(new Rectangle(125,300,350,50));
-            add(gameGo);                           
+        
+        if (game=="Math"){
+        JFrame question = new JFrame();
+        question.add(new Math(p1));
+        setBackground(Color.darkGray);        
+        setLayout(null);    
+        question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        question.setSize(800, 640);        
+        question.setVisible(true);
+        }
+        
+        if (game=="Geography"){
+        JFrame question = new JFrame();
+        question.add(new Geography(p1));
+        setBackground(Color.darkGray);        
+        setLayout(null);    
+        question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        question.setSize(800, 640);        
+        question.setVisible(true);
         }
             
     }
+
+
+
+
+
+
+
 }     
