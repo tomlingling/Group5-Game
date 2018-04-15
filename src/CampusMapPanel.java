@@ -186,6 +186,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             worldCampus.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             worldCampus.setSize(600, 480);        
             worldCampus.setVisible(true);
+            b1.setVisible(false);
         }
         if (obj == b2)
         {            
@@ -194,6 +195,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             uPark.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             uPark.setSize(600, 480);            
             uPark.setVisible(true);
+            b2.setVisible(false);
         }
         if (obj == b3)
         {            
@@ -202,6 +204,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             dubois.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             dubois.setSize(600, 480);         
             dubois.setVisible(true);
+            b3.setVisible(false);
         }
         if (obj == b4)
         {            
@@ -210,6 +213,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             berks.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             berks.setSize(600, 480);            
             berks.setVisible(true);
+            b4.setVisible(false);
         }      
         if (obj == b5)
         {            
@@ -218,6 +222,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             erie.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             erie.setSize(600, 480);            
             erie.setVisible(true);
+            b5.setVisible(false);
         }
         if (obj == b6)
         {            
@@ -226,6 +231,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             altoona.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             altoona.setSize(600, 480);            
             altoona.setVisible(true);
+            b6.setVisible(false);
         }          
     }
 }
