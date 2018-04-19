@@ -16,6 +16,7 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 public class PSAltoona extends JPanel implements ActionListener
 {
     GameOptions p1;
+    CampusMapPanel c1;
     JButton b1;
     JButton b2;
     JButton b3;    
@@ -29,7 +30,7 @@ public class PSAltoona extends JPanel implements ActionListener
     public PSAltoona(GameOptions games)
     {
         super();
-        p1 = games;
+        p1 = games;        
         setBackground(Color.blue);
         setLayout(null);   
         //----Welcome Button---- 

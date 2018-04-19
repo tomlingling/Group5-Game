@@ -27,8 +27,8 @@ public class CampusMapPanel extends JPanel implements ActionListener
     JButton b4;
     JButton b5;
     JButton b6;
-    JButton goToMain;
-    JButton timeLimit;
+    JButton gameOver;
+    JButton pickCampus;
     JButton timer;
     JLabel label;
     JButton gameName;
@@ -39,6 +39,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
     String difficultySelected = "Normal";
     
     int counter = 10;
+    int campusnum = 0;
     int delay;
     Timer tim;
     
@@ -65,56 +66,58 @@ public class CampusMapPanel extends JPanel implements ActionListener
         difficulty = new JButton("You're level is set to " + difficultySelected);
         difficulty.setBounds(new Rectangle(900,30,270,35));
         add(difficulty);
-        //----Back to Main Screen---
-        //goToMain = new JButton("Back to Main Screen");
-        //goToMain.setBounds(new Rectangle(50,30,170,35));
-        //goToMain.addActionListener(this);
-        //add(goToMain);
+        //----Go to Game Over---
+        gameOver = new JButton("Check Your Score");
+        gameOver.setBackground(Color.green);
+        gameOver.setBounds(new Rectangle(1000,280,170,170));
+        gameOver.setVisible(false);
+        gameOver.addActionListener(this);
+        add(gameOver);
         //----Time Limit Reminder----
-        timeLimit = new JButton("Pick your campus to continue.");
-        timeLimit.setBounds(new Rectangle(550,130,250,35));
-        add(timeLimit);
+        pickCampus = new JButton("Pick your campus to continue.");
+        pickCampus.setBounds(new Rectangle(550,130,250,35));
+        add(pickCampus);
         //----Timer Button---
         timer = new JButton("Timer");
         timer.setBounds(new Rectangle(1000,280,170,170));
         add(timer);        
         //----World Campus---
-        b1 = new JButton("World Campus");
+        b1 = new JButton("World Campus");        
         ImageIcon imageB1 = new ImageIcon("images/PSWorld2.jpg");
         b1.setIcon(imageB1);
         b1.setBounds(new Rectangle(775,230,135,120));
         b1.addActionListener(this);
         add(b1);
         //----University Park---
-        b2 = new JButton("University Park");
+        b2 = new JButton("University Park");       
         ImageIcon imageB2 = new ImageIcon("images/PSUPark.jpg");
         b2.setIcon(imageB2);
         b2.setBounds(new Rectangle(600,500,138,118));        
         b2.addActionListener(this);
         add(b2);
         //----DuBois Campus
-        b3 = new JButton("DuBois");
+        b3 = new JButton("DuBois");        
         ImageIcon imageB3 = new ImageIcon("images/PSDuBois.jpg");
         b3.setIcon(imageB3);
         b3.setBounds(new Rectangle(350,325,139,118));
         b3.addActionListener(this);
         add(b3);
         //-----Berks Campus---
-        b4 = new JButton("Berks");
+        b4 = new JButton("Berks");        
         ImageIcon imageB4 = new ImageIcon("images/PSBerks.jpg");
         b4.setIcon(imageB4);
         b4.setBounds(new Rectangle(950,575,140,140));
         b4.addActionListener(this);
         add(b4);
         //----Erie Campus---
-        b5 = new JButton("Erie");
+        b5 = new JButton("Erie");        
         ImageIcon imageB5 = new ImageIcon("images/PSErie.jpg");
         b5.setIcon(imageB5);
         b5.setBounds(new Rectangle(120,150,140,140));
         b5.addActionListener(this);
         add(b5);
         //----Altoona Campus---
-        b6 = new JButton("Altoona");
+        b6 = new JButton("Altoona");        
         ImageIcon imageB6 = new ImageIcon("images/PSAltoona.jpg");
         b6.setIcon(imageB6);
         b6.setBounds(new Rectangle(450,550,142,140));
@@ -171,14 +174,32 @@ public class CampusMapPanel extends JPanel implements ActionListener
         timer.setBackground(Color.green);
         timer.setText(String.valueOf(counter));
                 counter--;
+                //----if player runs out of time---
                 if (counter == -1)
                 {
                     tim.stop();
                     timer.setBackground(Color.red);
                     timer.setText("OUT OF TIME!!");
                     playMusic("TimeOut.wav");
-                    counter = 10;
+                    //---remove remaining buttons---
+                    b1.setVisible(false);
+                    b2.setVisible(false);
+                    b3.setVisible(false);
+                    b4.setVisible(false);
+                    b5.setVisible(false);
+                    b6.setVisible(false);     
+                    //-----open game over/out of time screen from here----
                 }
+                //----if player visits all 6 campuses----
+                if (campusnum == 6)
+                {
+                    tim.stop();
+                    timer.setVisible(false);
+                    gameOver.setVisible(true);                                                                             
+                    counter = 10;
+                    campusnum = 0;
+                }
+               
         if (obj == b1)
         {            
             JFrame worldCampus = new JFrame();
@@ -186,6 +207,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             worldCampus.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             worldCampus.setSize(600, 480);        
             worldCampus.setVisible(true);
+            campusnum = campusnum + 1;
             b1.setVisible(false);
         }
         if (obj == b2)
@@ -195,6 +217,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             uPark.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             uPark.setSize(600, 480);            
             uPark.setVisible(true);
+            campusnum = campusnum + 1;
             b2.setVisible(false);
         }
         if (obj == b3)
@@ -204,6 +227,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             dubois.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             dubois.setSize(600, 480);         
             dubois.setVisible(true);
+            campusnum = campusnum + 1;
             b3.setVisible(false);
         }
         if (obj == b4)
@@ -213,6 +237,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             berks.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             berks.setSize(600, 480);            
             berks.setVisible(true);
+            campusnum = campusnum + 1;
             b4.setVisible(false);
         }      
         if (obj == b5)
@@ -222,6 +247,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             erie.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             erie.setSize(600, 480);            
             erie.setVisible(true);
+            campusnum = campusnum + 1;
             b5.setVisible(false);
         }
         if (obj == b6)
@@ -231,7 +257,13 @@ public class CampusMapPanel extends JPanel implements ActionListener
             altoona.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             altoona.setSize(600, 480);            
             altoona.setVisible(true);
+            campusnum = campusnum + 1;
             b6.setVisible(false);
-        }          
+        }  
+        if (obj == gameOver)
+        {
+            //-----insert code for game over/all campuses visited screen here!-------
+            System.out.println("yep!");//this is a test line that can be removed
+        }
     }
 }
