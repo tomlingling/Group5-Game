@@ -43,11 +43,11 @@ public class History extends JPanel implements ActionListener {
         // Change question
         h1 = new JButton("  ");
         h1.setBounds(new Rectangle(525, 30, 300, 35));
-        if (questionNum == 1) {
+        if (questionNum == 0) {
             h1.setText("What year was this Campus found?");
-        } else if (questionNum == 2) {
+        } else if (questionNum == 1) {
             h1.setText("When was the campus library created?");
-        } else if (questionNum == 3) {
+        } else if (questionNum == 2) {
             h1.setText("Who was number 1?");
         }
         add(h1);
@@ -55,66 +55,66 @@ public class History extends JPanel implements ActionListener {
         h2 = new JButton(" ");
         h2.setBounds(new Rectangle(525, 150, 300, 35));
         //LOOK HERE Question Change
-        if (questionNum == 1) {
+        if (questionNum == 0) {
             h2.setText("1900");
-        } else if (questionNum == 2) {
+        } else if (questionNum == 1) {
             h2.setText("whatever");
-        } else if (questionNum == 3) {
+        } else if (questionNum == 2) {
             h2.setText("question 3");
         }
         add(h2);
 
         h3 = new JButton("  ");
         h3.setBounds(new Rectangle(525, 250, 300, 35));
-        if (questionNum == 1) {
+        if (questionNum == 0) {
             h3.setText("1940");
-        } else if (questionNum == 2) {
+        } else if (questionNum == 1) {
             h3.setText("whatever");
-        } else if (questionNum == 3) {
+        } else if (questionNum == 2) {
             h3.setText("question 3");
         }
         add(h3);
 
         h4 = new JButton(" ");
         h4.setBounds(new Rectangle(525, 350, 300, 35));
-        if (questionNum == 1) {
+        if (questionNum == 0) {
             h4.setText("1950");
-        } else if (questionNum == 2) {
+        } else if (questionNum == 1) {
             h4.setText("whatever");
-        } else if (questionNum == 3) {
+        } else if (questionNum == 2) {
             h4.setText("question 3");
         }
         add(h4);
 
         h5 = new JButton("  ");
         h5.setBounds(new Rectangle(525, 450, 300, 35));
-        if (questionNum == 1) {
+        if (questionNum == 0) {
             h5.setText("1960");
-        } else if (questionNum == 2) {
+        } else if (questionNum == 1) {
             h5.setText("whatever");
-        } else if (questionNum == 3) {
+        } else if (questionNum == 2) {
             h5.setText("question 3");
         }
         add(h5);
 
         h6 = new JButton(" ");
         h6.setBounds(new Rectangle(525, 550, 300, 35));
-        if (questionNum == 1) {
+        if (questionNum == 0) {
             h6.setText("1970");
-        } else if (questionNum == 2) {
+        } else if (questionNum == 1) {
             h6.setText("whatever");
-        } else if (questionNum == 3) {
+        } else if (questionNum == 2) {
             h6.setText("question 3");
         }
         add(h6);
 
         h7 = new JButton(" ");
         h7.setBounds(new Rectangle(525, 650, 300, 35));
-        if (questionNum == 1) {
+        if (questionNum == 0) {
             h6.setText("1970");
-        } else if (questionNum == 2) {
+        } else if (questionNum == 1) {
             h6.setText("whatever");
-        } else if (questionNum == 3) {
+        } else if (questionNum == 2) {
             h6.setText("question 3");
         }
         add(h7);
