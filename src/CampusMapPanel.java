@@ -177,7 +177,13 @@ public class CampusMapPanel extends JPanel implements ActionListener
                     timer.setBackground(Color.red);
                     timer.setText("OUT OF TIME!!");
                     playMusic("TimeOut.wav");
-                    counter = 10;
+                    //---remove remaining buttons---
+                    b1.setVisible(false);
+                    b2.setVisible(false);
+                    b3.setVisible(false);
+                    b4.setVisible(false);
+                    b5.setVisible(false);
+                    b6.setVisible(false);                    
                 }
         if (obj == b1)
         {            
