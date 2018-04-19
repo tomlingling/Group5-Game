@@ -2,6 +2,14 @@
 
 <java class="java.beans.XMLDecoder" version="1.8.0_144">
 
-<string>These are the text instructions for Group 5's Game.  Information for this panel can be found in the XML document entitled InstructPanel.xml.</string>
-
+<string>Welcome to the Campus Game!!</string>  
+<string>Let's find out how well you know Penn State.</string> 
+<string> </string>  
+<string>Choose from three subject categories: History, Math, or Geography</string> 
+<string> </string> 
+<string>Select your difficulty: Easy, Medium, or Hard</string> 
+<string> </string> 
+<string>Visit all 6 questions in the alloted time to complete the game.</string> 
+<string></string> 
+<string>If you run out of time...YOU LOSE!!</string> 
 </java>
