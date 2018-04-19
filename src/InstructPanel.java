@@ -16,17 +16,20 @@ public class InstructPanel extends JPanel implements ActionListener
     public InstructPanel()
     {
         super();
-        setBackground(Color.darkGray);
+        
         x2 = new XML_240();
         b1 = new JButton();
-        b1.setText("Click Here To View Instructions");
+        setBackground(Color.blue);
+        x2.openReaderXML("InstructPanel.xml");
+        instructions = (String) x2.ReadObject();
+        x2.closeReaderXML();
+        b1.setText(instructions);
         b1.setBounds(new Rectangle(50,50,150,50));
-        b1.addActionListener(this);
+        add(b1);
         b2 = new JButton();
         b2.setText("Back to Main Screen");
         b2.setBounds(new Rectangle(550,550,150,50));
         b2.addActionListener(this);
-        add(b1);    
         add(b2);
 
     }
@@ -34,16 +37,7 @@ public class InstructPanel extends JPanel implements ActionListener
     public void actionPerformed(ActionEvent event)
     {
         Object obj = event.getSource();
-        if (obj == b1)
-        {
-            setBackground(Color.blue);
-            
-            x2.openReaderXML("InstructPanel.xml");
-            instructions = (String) x2.ReadObject();
-            x2.closeReaderXML();
-            b1.setText(instructions);
-            add(b2);
-        }    
+        
             
 
         if (obj == b2)

@@ -23,7 +23,7 @@ public class GameDesigner extends JPanel implements ActionListener
         ImageIcon imageButton = new ImageIcon("images/GameDesign.jpg"); 
         b1.setIcon(imageButton);                    
         add(b1);
-        playMusic("20Fox.wav");
+        playMusic("Applause.wav");
         b2 = new JButton();
         b2.setText("Back to Main Screen");
         b2.setBounds(new Rectangle(550,550,150,50));
