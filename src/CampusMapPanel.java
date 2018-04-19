@@ -195,9 +195,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
                 {
                     tim.stop();
                     timer.setVisible(false);
-                    gameOver.setVisible(true);
-                    gameOver.setBackground(Color.green);                    
-                    playMusic("TaDa.wav");                    
+                    gameOver.setVisible(true);                                                                             
                     counter = 10;
                     campusnum = 0;
                 }
