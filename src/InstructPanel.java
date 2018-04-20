@@ -8,8 +8,7 @@ import java.beans.*;
 public class InstructPanel extends JPanel implements ActionListener
 {
     XML_240 x2;
-    JTextPane t1;
-    String instructions = "";   
+    JTextPane t1; 
     JButton b1;
     JButton p2;
     String s1, s2, s3, s4, s5, s6;
@@ -24,10 +23,6 @@ public class InstructPanel extends JPanel implements ActionListener
         add(b1);
         b1.addActionListener(this);
         b1.setText("Click Here for Instructions");
-    
-
-
-        
         p2 = new JButton();
         p2.setText("Click Here for Main Screen");
         p2.setBounds(new Rectangle(550,550,150,50));
