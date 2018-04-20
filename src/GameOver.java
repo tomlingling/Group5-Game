@@ -14,15 +14,16 @@ import java.awt.event.*;
 
 public class GameOver extends JPanel //implements ActionListener
 {
-    JTextArea b1;
+    JButton b1;
 
     public GameOver()
     {
         super();
-        setBackground(Color.RED);
-        b1 = new JTextArea();
-        b1.setText("This is a place-holder for GAME OVER");
-        b1.setBounds(new Rectangle(50,50,150,50));
+        setBackground(Color.green);
+        b1 = new JButton();
+        ImageIcon imageB1 = new ImageIcon("images/GameOver.jpg");
+        b1.setIcon(imageB1);
+        b1.setBounds(new Rectangle(100,50,150,50));
         add(b1);
     }
 }
