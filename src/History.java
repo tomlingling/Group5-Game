@@ -18,6 +18,9 @@ public class History extends JPanel implements ActionListener {
     JButton h5;
     JButton h6;
     JButton h7;
+    String campus;
+    int questionNum;
+    int counter = 0;
 
     //JLabel label = new JLabel("History Question 1");
     //JLabel label2 = new JLabel("What year was this Campus found?");
@@ -27,7 +30,6 @@ public class History extends JPanel implements ActionListener {
     //JButton button4 = new JButton("1930");
     // JButton button5 = new JButton("1950");
     //JButton button6 = new JButton("1980");
-
     /**
      *
      * @param games
@@ -35,7 +37,7 @@ public class History extends JPanel implements ActionListener {
      * @param campus
      * @param score
      */
-        public History(GameOptions games, int questionNum, String campus, int score) {
+    public History(GameOptions games, int questionNum, String campus, int score) {
         super();
         p1 = games;
         setBackground(Color.YELLOW);
@@ -155,10 +157,7 @@ public class History extends JPanel implements ActionListener {
      add(b1);
      */
 
- 
-
-    @Override
-    public void actionPerformed(ActionEvent ae) {
+    public void actionPerformed(ActionEvent event) {
 
         /*
        
@@ -182,5 +181,17 @@ public class History extends JPanel implements ActionListener {
                         
         
          */
+        if (campus == "PSU World Campus") {
+            if (h2.isSelected()) {
+                h1.setText("Right!");
+                h1.setBackground(Color.GREEN);
+                counter++;
+            } else {
+                h1.setText("Wrong!!");
+                h1.setBackground(Color.RED);
+            }
+            questionNum++;
+        }
+
     }
 }
