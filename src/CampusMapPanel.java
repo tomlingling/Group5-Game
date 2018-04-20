@@ -20,13 +20,15 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class CampusMapPanel extends JPanel implements ActionListener
 {
-    GameOptions p1;        
+    GameOptions p1;   
+   
     JButton b1;
     JButton b2;
     JButton b3;
     JButton b4;
     JButton b5;
     JButton b6;
+    
     JButton gameOver;
     JButton pickCampus;
     JButton timer;
@@ -189,6 +191,11 @@ public class CampusMapPanel extends JPanel implements ActionListener
                     b5.setVisible(false);
                     b6.setVisible(false);     
                     //-----open game over/out of time screen from here----
+                    JFrame gameover = new JFrame();
+                    gameover.add(new YouLose());
+                    gameover.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+                    gameover.setSize(600, 600);            
+                    gameover.setVisible(true);           
                 }
                 //----if player visits all 6 campuses----
                 if (campusnum == 6)
@@ -262,8 +269,12 @@ public class CampusMapPanel extends JPanel implements ActionListener
         }  
         if (obj == gameOver)
         {
-            //-----insert code for game over/all campuses visited screen here!-------
-            System.out.println("yep!");//this is a test line that can be removed
+            JFrame gameEnd = new JFrame();
+            gameEnd.add(new GameOver());
+            gameEnd.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            gameEnd.setSize(600, 480);            
+            gameEnd.setVisible(true);
+            gameOver.setVisible(false);
         }
     }
 }
