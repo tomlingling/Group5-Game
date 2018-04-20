@@ -17,62 +17,22 @@ import java.io.FileInputStream;
 
 public class TipsTricks extends JPanel implements ActionListener
 {
-    XMLDecoder de;
-    String title;
-    String l1;
-    String l2;
-    String l3;
-    String l4;
-    String l5;
-    String l6;
-    String l7;
-    String l8;
-    String l9;
-    String l10;
-        
-    JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11;
+    XML_240 x2;
+    JTextPane t1; 
+    JButton b1;
     JButton p2;
+    String s1, s2, s3, s4, s5, s6;
+    String newline = System.getProperty("line.separator");
     
     public TipsTricks()
     {
-        setLayout(new GridLayout(12,1));
-        
+        super();
+        x2 = new XML_240();
+        setBackground(Color.blue);
         b1 = new JButton();
         add(b1);
-        b2 = new JButton();
-        add(b2);
-        b3 = new JButton();
-        add(b3);
-        b4 = new JButton();
-        add(b4);
-        b5 = new JButton();
-        add(b5);
-        b6 = new JButton();
-        add(b6);
-        b7 = new JButton();
-        add(b7);
-        b8 = new JButton();
-        add(b8);
-        b9 = new JButton();
-        add(b9);
-        b10 = new JButton();
-        add(b10);
-        b11 = new JButton();
-        add(b11);
-        
-        
-        b1.setText(title);
-        b2.setText(l1);
-        b3.setText(l2);
-        b4.setText(l3);
-        b5.setText(l4);
-        b6.setText(l5);
-        b7.setText(l6);
-        b8.setText(l7);
-        b9.setText(l8);
-        b10.setText(l9);
-        b11.setText(l10);
-        
+        b1.addActionListener(this);
+        b1.setText("Click Here for Tips and Tricks on the Game");
         p2 = new JButton();
         p2.setText("Click Here for Main Screen");
         p2.setBounds(new Rectangle(550,550,150,50));
@@ -81,48 +41,27 @@ public class TipsTricks extends JPanel implements ActionListener
     }
 
 
-        {
-            try
-            {
-                de = new XMLDecoder(new BufferedInputStream(new FileInputStream("TipsTricks.xml")));
-            } catch (Exception xx)
-            {
-                xx.printStackTrace();
-            }
-            try
-            {
-                title = (String) de.readObject();
-                l1 = (String) de.readObject();
-                l2 = (String) de.readObject();
-                l3 = (String) de.readObject();
-                l4 = (String) de.readObject();
-                l5 = (String) de.readObject();
-                l6 = (String) de.readObject();
-                l7 = (String) de.readObject();
-                l8 = (String) de.readObject();
-                l9 = (String) de.readObject();
-                l10 = (String) de.readObject();
-                
-
-            } catch (Exception xx)
-            {
-                xx.printStackTrace();
-            }
-            try
-            {
-                de.close();
-            } catch (Exception xx)
-            {
-                xx.printStackTrace();
-            }
-        }
-    
     public void actionPerformed(ActionEvent event)
     {
         Object obj = event.getSource();
-        
-            
-
+        if (obj==b1)
+        {
+            setLayout(null);
+            t1 = new JTextPane();
+            b1.setVisible(false);
+            x2.openReaderXML("TipsTricks.xml");
+            t1.setBounds(new Rectangle(50,50,600,200));
+            p2.setBounds(new Rectangle(300,450,200,100));
+            s1 = (String) x2.ReadObject();
+            s2 = (String) x2.ReadObject();
+            s3 = (String) x2.ReadObject();
+            s4 = (String) x2.ReadObject();
+            s5 = (String) x2.ReadObject();
+            s6 = (String) x2.ReadObject();            
+            t1.setText(s1 + newline + s2 + newline + s3 + newline + s4 + newline + s5 + newline + s6);
+            t1.setEditable(false);
+            add(t1);
+        }
         if (obj == p2)
         {
             JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
