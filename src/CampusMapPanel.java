@@ -262,8 +262,12 @@ public class CampusMapPanel extends JPanel implements ActionListener
         }  
         if (obj == gameOver)
         {
-            //-----insert code for game over/all campuses visited screen here!-------
-            System.out.println("yep!");//this is a test line that can be removed
+            JFrame gameEnd = new JFrame();
+            gameEnd.add(new GameOver());
+            gameEnd.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            gameEnd.setSize(600, 480);            
+            gameEnd.setVisible(true);
+            gameOver.setVisible(false);
         }
     }
 }

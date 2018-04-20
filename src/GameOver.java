@@ -12,8 +12,8 @@ import java.awt.event.*;
 
 // This is a place holder until we know when to use this text screen in our game
 
-public class GameOver extends JPanel {
-    
+public class GameOver extends JPanel //implements ActionListener
+{
     JTextArea b1;
 
     public GameOver()
