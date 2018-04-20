@@ -192,6 +192,16 @@ public class History extends JPanel implements ActionListener {
             }
             questionNum++;
         }
-
+        if (campus == "Penn State DuBois") {
+            if (h3.isSelected()) {
+                h1.setText("Right!");
+                h1.setBackground(Color.GREEN);
+                counter++;
+            } else {
+                h1.setText("Wrong!!");
+                h1.setBackground(Color.RED);
+            }
+            questionNum++;
+        }
     }
 }
