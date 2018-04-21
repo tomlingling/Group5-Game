@@ -59,7 +59,7 @@ public class PSErie extends JPanel implements ActionListener
         
         if (game=="History"){
         JFrame question = new JFrame();
-        question.add(new History(p1, 0, " ", 0));
+        question.add(new History(p1, 0, "Penn State Erie", 0));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
