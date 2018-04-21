@@ -197,7 +197,9 @@ public class CampusMapPanel extends JPanel implements ActionListener
                     gameover.add(new YouLose());
                     gameover.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
                     gameover.setSize(600, 600);            
-                    gameover.setVisible(true);           
+                    gameover.setVisible(true);
+                    JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                    MyJFrame.dispose();                        
                 }
                 //----if player visits all 6 campuses----
                 if (campusnum == 6)

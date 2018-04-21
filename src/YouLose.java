@@ -15,6 +15,7 @@ import java.awt.event.*;
 public class YouLose extends JPanel implements ActionListener
 {
     JButton b1;
+    JButton b2;
     JButton p2;
 
     public YouLose()
@@ -27,6 +28,12 @@ public class YouLose extends JPanel implements ActionListener
         b1.setBounds(new Rectangle(100,50,150,50));
         add(b1);
         
+        b2 = new JButton();
+        b2.setText("Try Again");
+        b2.setBounds(new Rectangle (600,600,150,50));
+        b2.addActionListener(this);
+        add(b2);
+        
         p2 = new JButton();
         p2.setText("Click to End Game");
         p2.setBounds(new Rectangle(550,550,150,50));
@@ -37,7 +44,11 @@ public class YouLose extends JPanel implements ActionListener
     public void actionPerformed(ActionEvent event)
     {
         Object obj = event.getSource();           
-
+        if (obj == b2)
+        {
+            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+            MyJFrame.dispose();             
+        }
         if (obj == p2)
         {
             System.exit(0); 
