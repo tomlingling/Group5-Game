@@ -58,12 +58,13 @@ public class PSWorldCampus extends JPanel implements ActionListener
         MyJFrame.dispose();    
         
         if (game=="History"){
+        
         JFrame question = new JFrame();
         question.add(new History(p1, 0, "PSU World Campus", 0));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        question.setSize(800, 640);        
+        question.setSize(800, 640);
         question.setVisible(true);
         }
         

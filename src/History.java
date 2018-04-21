@@ -205,9 +205,11 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     questionNum++;
                     //GameOptions games, int questionNum, String campus, int score
+                    JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                    MyJFrame.dispose();
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
 
@@ -217,11 +219,11 @@ public class History extends JPanel implements ActionListener {
                     h1.setText("Right!");
                     h1.setBackground(Color.GREEN);
                     score++;
-                   // questionNum++;
+                    // questionNum++;
                     //GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -230,10 +232,10 @@ public class History extends JPanel implements ActionListener {
                 if (h4.isSelected()) {
                     h1.setText("Right!");
                     h1.setBackground(Color.GREEN);
-                     score++;
+                    score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -245,7 +247,7 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -257,7 +259,7 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -269,7 +271,7 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -285,7 +287,7 @@ public class History extends JPanel implements ActionListener {
                     //GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
 
@@ -295,11 +297,11 @@ public class History extends JPanel implements ActionListener {
                     h1.setText("Right!");
                     h1.setBackground(Color.GREEN);
                     score++;
-                   // questionNum++;
+                    // questionNum++;
                     //GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -308,10 +310,10 @@ public class History extends JPanel implements ActionListener {
                 if (h4.isSelected()) {
                     h1.setText("Right!");
                     h1.setBackground(Color.GREEN);
-                     score++;
+                    score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -323,7 +325,7 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -335,7 +337,7 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -347,13 +349,13 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
             }
         } else if (questionNum == 2) {
-                        if (campus.matches("PSU World Campus")) {
+            if (campus.matches("PSU World Campus")) {
                 if (obj == h2) {
                     h1.setText("Right!");
                     h1.setBackground(Color.GREEN);
@@ -362,7 +364,7 @@ public class History extends JPanel implements ActionListener {
                     //GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
 
@@ -372,11 +374,11 @@ public class History extends JPanel implements ActionListener {
                     h1.setText("Right!");
                     h1.setBackground(Color.GREEN);
                     score++;
-                   // questionNum++;
+                    // questionNum++;
                     //GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -385,10 +387,10 @@ public class History extends JPanel implements ActionListener {
                 if (h4.isSelected()) {
                     h1.setText("Right!");
                     h1.setBackground(Color.GREEN);
-                     score++;
+                    score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -400,7 +402,7 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -412,7 +414,7 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
@@ -424,19 +426,21 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     nextQuestion();
                 } else {
-                    h1.setText("Wrong!!");
+                    h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
                 questionNum++;
             }
 
-        } else {  h1.setText("Go to Next Campus!!");
-                  h1.setBackground(Color.magenta);
+        } else {
+            h1.setText("Go to Next Campus!!");
+            h1.setBackground(Color.magenta);
         }
     }
 
     private void nextQuestion() {
         setVisible(false);
+        // question.this.dispose(); 
         JFrame question = new JFrame();
         question.add(new History(p1, questionNum, campus, score));
         setBackground(Color.darkGray);
