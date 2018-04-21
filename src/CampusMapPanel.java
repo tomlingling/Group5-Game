@@ -283,6 +283,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
             x2.writeObject(s2);
             x2.writeObject(s3);
             x2.closeWriterXML();
+            tim.stop();
             //The code below opens the Game Over screen
             JFrame gameEnd = new JFrame();
             gameEnd.add(new GameOver());

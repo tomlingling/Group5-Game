@@ -5,102 +5,486 @@ import javax.swing.*;
 import java.awt.event.*;
 
 import javax.swing.JLabel;
+import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+public class Math extends JPanel implements ActionListener {
 
-/**
- *
- * @author Len
- */
-
-public class Math extends JPanel //implements ActionListener
-{
     GameOptions p1;
-    JButton b1;
-    JButton m1 ;
-    JButton m2 ;
-    JButton m3 ;
-    JButton m4 ;
-    JButton m5 ;
-    JButton m6 ;
-    JButton m7 ;
-      
-    //JLabel label = new JLabel ("Math Question 1");
-    //JLabel label2 = new JLabel ("Count the number of letters of the campus name, divde by 2 and multipe by 5 what is the answer?");
+    String campus;
+    int questionNum;
+    int score;
     
-    //JButton button1 = new JButton("200");
-    //JButton button2 = new JButton("240");
-    //JButton button3 = new JButton("300");
-    //JButton button4 = new JButton("350");
-    //JButton button5 = new JButton("650");
-    //JButton button6 = new JButton("450");
+    JButton question;
+    JButton ans1;
+    JButton ans2;
+    JButton ans3;
+    
+    int wcampScore;
+    int altScore;
+    int berkScore;
+    int upScore;
+    int erieScore;
+    int dubScore;
+    
+    public Math(GameOptions games, String campus) 
+    {
+        super();
+        p1 = games;
+        setBackground(Color.darkGray);
+        GridLayout mathPanel = new GridLayout(5,1);
+        setVisible(true);
+        this.campus = campus;   
+                
+        //-----Add question & answers based on campus selected-----
+        
+        if (campus.matches("PSU World Campus")) 
+        {
+            question = new JButton("How many miles is this campus from the moon?");            
+            add(question);
+            
+            ans1 = new JButton("Don't know");
+            ans1.addActionListener(this);
+            add(ans1);
+            
+            ans2 = new JButton("Don't care");
+            ans2.addActionListener(this);
+            add(ans2);
+            
+            ans3 = new JButton("Why do you ask?");
+            ans3.addActionListener(this);
+            add(ans3);
+        }
+    }    
+        
+     
+        public void actionPerformed(ActionEvent event) 
+        {
+            Object obj = event.getSource();
+            
+            if (obj == ans2) {
+                    ans2.setText("Right!");
+                    ans2.setBackground(Color.GREEN);
+                    wcampScore = 1;                                       
+                } else {                        
+                        ans2.setText("Wrong!!");
+                        ans2.setBackground(Color.RED);
+                        wcampScore = 0;
+                }      
+            
+        }
+        
+    }
     
     /*
-       public void actionperformed(ActionEvent event){
-       if (button1.isSelected()){
-           button1.setText("Wrong!");
-       }
-       if (button2.isSelected()){
-          button2.setText("Wrong!"); 
-       }
-      if (button3.isSelected()){
-           button3.setText("Wrong!");
-       }
-       if (button4.isSelected()){
-           button4.setText("Wrong!");
-       }
-       if (button5.isSelected()){
-           button5.setText("Wrong!");
-       }
-       if (button6.isSelected()){
-           button6.setText("Right!");
-       }
-     
-          */   
-       public Math(GameOptions games){
-        super(); 
-        p1 = games; 
-        setBackground(Color.GREEN);
-        setLayout(null);
-        m1 = new JButton("Add the letters of the campus name and multiple by 9, what is the number?");
-        m1.setBounds(new Rectangle(525,30,300,35));
-        add(m1);
-        
-        m2 = new JButton("1900");
-        m2.setBounds(new Rectangle(525,150,300,35));
-        add(m2);
-        
-        m3 = new JButton("1940");
-        m3.setBounds(new Rectangle(525,250,300,35));
-        add(m3);
-        
-        m4 = new JButton("1950");
-        m4.setBounds(new Rectangle(525,350,300,35));
-        add(m4);
-        
-        m5 = new JButton("1960");
-        m5.setBounds(new Rectangle(525,450,300,35));
-        add(m5);
-        
-        m6 = new JButton("1970");
-        m6.setBounds(new Rectangle(525,550,300,35));
-        add(m6);
-        
-        m7 = new JButton("1980");
-        m7.setBounds(new Rectangle(525,650,300,35));
-        add(m7);
-       }    
-           
-   } 
-   /* 
-String getQuestion()
-{
-    String subject = "This will be a math question.";
-    return subject;
-}
-  */   
+     public  void actionperformed(ActionEvent event) {
+     //If World Campus is selected
+     if (p1.b1.isSelected()) {
+     if (button1.isSelected()) {
+     label2.setText("Right!");
+     label2.setBackground(Color.GREEN);
 
+     } else {
+     label2.setText("Wrong!!");
+     label2.setBackground(Color.RED);
+
+     }
+     }
+     //If University Park is selected
+     if (p1.b2.isSelected()) {
+     if (button2.isSelected()) {
+     label2.setText("Right!");
+     label2.setBackground(Color.GREEN);
+
+     } else {
+     label2.setText("Wrong!!");
+     label2.setBackground(Color.RED);
+
+     }
+     }
+     }
+     
+
+     /* public History(GameOptions games) {
+     b1 = new JButton();
+     b1.setText("Question 1");
+     b1.setBounds(new Rectangle(125, 50, 350, 50));
+     add(b1);
+     
+
+    private void setUpQuestions() {
+        h1 = new JButton("  ");
+        h1.setBounds(new Rectangle(525, 30, 300, 35));
+        if (questionNum == 0) {
+            h1.setText("What year was this Campus found?");
+        } else if (questionNum == 1) {
+            h1.setText("When was the campus library created?");
+        } else if (questionNum == 2) {
+            h1.setText("Who was number 1?");
+        }else if (questionNum == 3) {
+            h1.setText("Click First Button to Close Window and move on");
+        }
+        add(h1);
+        //h1.validate();
+        //h1.repaint();
+
+        h2 = new JButton(" ");
+        h2.setBounds(new Rectangle(525, 150, 300, 35));
+        //LOOK HERE Question Change
+        if (questionNum == 0) {
+            h2.setText("1900");
+        } else if (questionNum == 1) {
+            h2.setText("whatever");
+        } else if (questionNum == 2) {
+            h2.setText("question 3");
+        } else if (questionNum == 3) {
+            h2.setText("Click here to keep moving!");
+        }
+        h2.addActionListener(this);
+        add(h2);
+       // h2.validate();
+       // h2.repaint();
+
+        h3 = new JButton("  ");
+        h3.setBounds(new Rectangle(525, 250, 300, 35));
+        if (questionNum == 0) {
+            h3.setText("1940");
+        } else if (questionNum == 1) {
+            h3.setText("whatever");
+        } else if (questionNum == 2) {
+            h3.setText("question 3");
+        }
+        add(h3);
+
+        h4 = new JButton(" ");
+        h4.setBounds(new Rectangle(525, 350, 300, 35));
+        if (questionNum == 0) {
+            h4.setText("1950");
+        } else if (questionNum == 1) {
+            h4.setText("whatever");
+        } else if (questionNum == 2) {
+            h4.setText("question 3");
+        }
+        add(h4);
+
+        h5 = new JButton("  ");
+        h5.setBounds(new Rectangle(525, 450, 300, 35));
+        if (questionNum == 0) {
+            h5.setText("1960");
+        } else if (questionNum == 1) {
+            h5.setText("whatever");
+        } else if (questionNum == 2) {
+            h5.setText("question 3");
+        }
+        add(h5);
+
+        h6 = new JButton(" ");
+        h6.setBounds(new Rectangle(525, 550, 300, 35));
+        if (questionNum == 0) {
+            h6.setText("1970");
+        } else if (questionNum == 1) {
+            h6.setText("whatever");
+        } else if (questionNum == 2) {
+            h6.setText("question 3");
+        }
+        add(h6);
+
+        h7 = new JButton(" ");
+        h7.setBounds(new Rectangle(525, 650, 300, 35));
+        if (questionNum == 0) {
+            h6.setText("1970");
+        } else if (questionNum == 1) {
+            h6.setText("whatever");
+        } else if (questionNum == 2) {
+            h6.setText("question 3");
+        }
+        add(h7);
+        //revalidate();
+        //validate();
+    }
+
+    public void actionPerformed(ActionEvent event) {
+
+        /*
+       
+        
+        
+         if
+         answer1 is presses && campus == stateCollege
+         then
+         check question 1
+         if 
+         question is 1
+         then
+         recall history class
+         Pass game, and question++, also increase score
+         else if
+         answer 2 is pressed
+         if
+         question is 1
+         then
+         print wrong answer
+                        
+        
+         
+        Object obj = event.getSource();
+        if (questionNum == 0) {
+            if (campus.matches("PSU World Campus")) {
+                if (obj == h2) {
+                    h1.setText("Right! Click answer again to move forward!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    questionNum++;
+                   // GameOptions games, int questionNum, String campus, int score
+                    nextQuestion();
+                   Frame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                   MyJFrame.dispose();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+            }
+            if (campus.matches("Penn State DuBois")) {
+                if (h3.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    // questionNum++;
+                    //GameOptions games, int questionNum, String campus, int score
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("Penn State Berks")) {
+                if (h4.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("Penn State Altoona")) {
+                if (h5.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("Penn State Erie")) {
+                if (h6.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("University Park")) {
+                if (h7.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+
+        } else if (questionNum == 1) {
+            if (campus.matches("PSU World Campus")) {
+                if (obj == h2) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    questionNum++;
+                    //GameOptions games, int questionNum, String campus, int score
+                    nextQuestion();
+                    JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                    MyJFrame.dispose();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+
+            }
+            if (campus.matches("Penn State DuBois")) {
+                if (h3.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    // questionNum++;
+                    //GameOptions games, int questionNum, String campus, int score
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("Penn State Berks")) {
+                if (h4.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("Penn State Altoona")) {
+                if (h5.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("Penn State Erie")) {
+                if (h6.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("University Park")) {
+                if (h7.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+        } else if (questionNum == 2) {
+            if (campus.matches("PSU World Campus")) {
+                if (obj == h2) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    questionNum++;
+                    //GameOptions games, int questionNum, String campus, int score
+                    nextQuestion();
+                    JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                    MyJFrame.dispose();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+
+            }
+            if (campus.matches("Penn State DuBois")) {
+                if (h3.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    // questionNum++;
+                    //GameOptions games, int questionNum, String campus, int score
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("Penn State Berks")) {
+                if (h4.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("Penn State Altoona")) {
+                if (h5.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("Penn State Erie")) {
+                if (h6.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                    nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+            if (campus.matches("University Park")) {
+                if (h7.isSelected()) {
+                    h1.setText("Right!");
+                    h1.setBackground(Color.GREEN);
+                    score++;
+                   nextQuestion();
+                } else {
+                    h1.setText("Wrong!! Try Again");
+                    h1.setBackground(Color.RED);
+                }
+                questionNum++;
+            }
+
+        } 
+        else if (questionNum ==3) {
+            //h1.setText("Go to Next Campus!!");
+          //  h1.setBackground(Color.magenta);
+            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+            MyJFrame.dispose();
+        }
+    }
+
+    private void nextQuestion() {
+        setVisible(false);
+        // question.this.dispose(); 
+        JFrame question = new JFrame();
+        question.add(new History(p1, questionNum, campus, score));
+        setBackground(Color.darkGray);
+        setLayout(null);
+        question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        question.setSize(800, 640);
+        question.setVisible(true);
+
+    }
+
+}*/
