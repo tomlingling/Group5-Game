@@ -94,6 +94,8 @@ public class History extends JPanel implements ActionListener {
             h1.setText("When was the campus library created?");
         } else if (questionNum == 2) {
             h1.setText("Who was number 1?");
+        }else if (questionNum == 3) {
+            h1.setText("Click First Button to Close Window and move on");
         }
         add(h1);
         //h1.validate();
@@ -108,11 +110,13 @@ public class History extends JPanel implements ActionListener {
             h2.setText("whatever");
         } else if (questionNum == 2) {
             h2.setText("question 3");
+        } else if (questionNum == 3) {
+            h2.setText("Click here to keep moving!");
         }
         h2.addActionListener(this);
         add(h2);
-        h2.validate();
-        h2.repaint();
+       // h2.validate();
+       // h2.repaint();
 
         h3 = new JButton("  ");
         h3.setBounds(new Rectangle(525, 250, 300, 35));
@@ -200,19 +204,18 @@ public class History extends JPanel implements ActionListener {
         if (questionNum == 0) {
             if (campus.matches("PSU World Campus")) {
                 if (obj == h2) {
-                    h1.setText("Right!");
+                    h1.setText("Right! Click answer again to move forward!");
                     h1.setBackground(Color.GREEN);
                     score++;
                     questionNum++;
-                    //GameOptions games, int questionNum, String campus, int score
+                   // GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
-                    JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
-                    MyJFrame.dispose();                    
+                   Frame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                   MyJFrame.dispose();
                 } else {
                     h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
                 }
-
             }
             if (campus.matches("Penn State DuBois")) {
                 if (h3.isSelected()) {
@@ -287,7 +290,7 @@ public class History extends JPanel implements ActionListener {
                     //GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
                     JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
-                    MyJFrame.dispose();                     
+                    MyJFrame.dispose();
                 } else {
                     h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
@@ -366,7 +369,7 @@ public class History extends JPanel implements ActionListener {
                     //GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
                     JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
-                    MyJFrame.dispose();                     
+                    MyJFrame.dispose();
                 } else {
                     h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
@@ -428,7 +431,7 @@ public class History extends JPanel implements ActionListener {
                     h1.setText("Right!");
                     h1.setBackground(Color.GREEN);
                     score++;
-                    nextQuestion();
+                   nextQuestion();
                 } else {
                     h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
@@ -436,9 +439,12 @@ public class History extends JPanel implements ActionListener {
                 questionNum++;
             }
 
-        } else {
-            h1.setText("Go to Next Campus!!");
-            h1.setBackground(Color.magenta);
+        } 
+        else if (questionNum ==3) {
+            //h1.setText("Go to Next Campus!!");
+          //  h1.setBackground(Color.magenta);
+            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+            MyJFrame.dispose();
         }
     }
 
