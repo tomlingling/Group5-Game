@@ -271,12 +271,6 @@ public class CampusMapPanel extends JPanel implements ActionListener
         }  
         if (obj == gameOver)
         {
-            JFrame gameEnd = new JFrame();
-            gameEnd.add(new GameOver());
-            gameEnd.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-            gameEnd.setSize(600, 480);            
-            gameEnd.setVisible(true);
-            gameOver.setVisible(false);
             //The code below writes the XML file for name and options logging
             x2 = new XML_240();
             String s1 = nameOfPlayer;
@@ -287,6 +281,13 @@ public class CampusMapPanel extends JPanel implements ActionListener
             x2.writeObject(s2);
             x2.writeObject(s3);
             x2.closeWriterXML();
+            //The code below opens the Game Over screen
+            JFrame gameEnd = new JFrame();
+            gameEnd.add(new GameOver());
+            gameEnd.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            gameEnd.setSize(600, 480);            
+            gameEnd.setVisible(true);
+            gameOver.setVisible(false);
             //The code below closes the Game Options panel
             JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
             MyJFrame.dispose();            
