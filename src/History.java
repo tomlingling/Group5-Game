@@ -205,9 +205,9 @@ public class History extends JPanel implements ActionListener {
                     score++;
                     questionNum++;
                     //GameOptions games, int questionNum, String campus, int score
-                    JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
-                    MyJFrame.dispose();
                     nextQuestion();
+                    JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                    MyJFrame.dispose();                    
                 } else {
                     h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
@@ -286,6 +286,8 @@ public class History extends JPanel implements ActionListener {
                     questionNum++;
                     //GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
+                    JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                    MyJFrame.dispose();                     
                 } else {
                     h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
@@ -363,6 +365,8 @@ public class History extends JPanel implements ActionListener {
                     questionNum++;
                     //GameOptions games, int questionNum, String campus, int score
                     nextQuestion();
+                    JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                    MyJFrame.dispose();                     
                 } else {
                     h1.setText("Wrong!! Try Again");
                     h1.setBackground(Color.RED);
