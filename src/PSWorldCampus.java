@@ -70,7 +70,7 @@ public class PSWorldCampus extends JPanel implements ActionListener
         
         if (game=="Math"){
         JFrame question = new JFrame();
-        question.add(new Math(p1, "PSU World Campus"));
+        question.add(new Math(p1, "PSWorldCampus"));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);

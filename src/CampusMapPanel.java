@@ -42,7 +42,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
     String nameOfPlayer = "Name";
     String difficultySelected = "Normal";
     
-    int counter = 10;
+    int counter = 120;
     int campusnum = 0;
     int delay;
     Timer tim;

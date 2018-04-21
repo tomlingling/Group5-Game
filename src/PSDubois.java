@@ -69,7 +69,7 @@ public class PSDubois extends JPanel implements ActionListener
         
         if (game=="Math"){
         JFrame question = new JFrame();
-        question.add(new Math(p1, "Altoona"));
+        question.add(new Math(p1, "PSDubois"));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
