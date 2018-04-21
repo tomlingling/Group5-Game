@@ -37,7 +37,7 @@ public class Math extends JPanel implements ActionListener {
                 
         //-----Add question & answers based on campus selected-----
         
-        if (campus.matches("PSU World Campus")) 
+        if (campus.matches("PSWorldCampus")) 
         {
             question = new JButton("How many miles is this campus from the moon?");            
             add(question);
