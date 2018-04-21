@@ -15,11 +15,13 @@ import javax.swing.*;
 import java.awt.event.*;
 import sun.audio.*;
 import java.io.*;
+import java.beans.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class CampusMapPanel extends JPanel implements ActionListener
 {
+    XML_240 x2;
     GameOptions p1;   
    
     JButton b1;
@@ -275,6 +277,19 @@ public class CampusMapPanel extends JPanel implements ActionListener
             gameEnd.setSize(600, 480);            
             gameEnd.setVisible(true);
             gameOver.setVisible(false);
+            //The code below writes the XML file for name and options logging
+            x2 = new XML_240();
+            String s1 = nameOfPlayer;
+            String s2 = gamePicked;
+            String s3 = difficultySelected;
+            x2.openWriterXML("playHistory.xml");
+            x2.writeObject(s1);
+            x2.writeObject(s2);
+            x2.writeObject(s3);
+            x2.closeWriterXML();
+            //The code below closes the Game Options panel
+            JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+            MyJFrame.dispose();            
         }
     }
 }

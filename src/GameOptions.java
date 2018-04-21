@@ -10,7 +10,6 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class GameOptions extends JPanel implements ActionListener
 {
-    XML_240 x2;
     JRadioButton rb1 = new JRadioButton("History",true);
     JRadioButton rb2 = new JRadioButton("Math");
     JRadioButton rb3 = new JRadioButton("Geography");
@@ -144,19 +143,8 @@ public class GameOptions extends JPanel implements ActionListener
             gamePanel.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             gamePanel.setSize(1420, 1020);        
             gamePanel.setVisible(true);
-            //The code below writes the XML file for name and options logging
-            x2 = new XML_240();
-            String s1 = playerName;
-            String s2 = gameName;
-            String s3 = difficulty;
-            x2.openWriterXML("playHistory.xml");
-            x2.writeObject(s1);
-            x2.writeObject(s2);
-            x2.writeObject(s3);
-            x2.closeWriterXML();
-            //The code below closes the Game Options panel
             JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
-            MyJFrame.dispose();
+            MyJFrame.dispose();                      
         }
     }
 }
