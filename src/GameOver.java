@@ -6,6 +6,7 @@
  */
 
 
+import com.sun.org.apache.xpath.internal.patterns.NodeTest;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -18,15 +19,18 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 
 public class GameOver extends JPanel implements ActionListener
 {
-    JButton b1, b2, b3;
+    JButton b1, b2, b3, b4;
     JTextPane t1;
-    String s1, s2, s3;
+    String s1, s2, s3, s4;
     String newline = System.getProperty("line.separator");
     XML_240 x2;
-    
+//    History H; 
+//    String MyScore;
     public GameOver()
-    {
+    {   
         super();
+//        H = FinalScore_H;  History FinalScore_H
+      //  MyScore = H.UserScore; 
         setBackground(Color.green);
         b1 = new JButton();
         ImageIcon imageB1 = new ImageIcon("images/GameOver.jpg");
@@ -40,9 +44,11 @@ public class GameOver extends JPanel implements ActionListener
         s1 = (String) x2.ReadObject();
         s2 = (String) x2.ReadObject();
         s3 = (String) x2.ReadObject();            
-        t1.setText("Previous Scores" + newline + "Player Name: " + s1 + newline + "Game Played: " + s2 + newline + "Difficulty Selected: " + s3);
+        t1.setText("Previous Scores" + newline + "Player Name: " + s1 + newline + "Game Played: " + s2 + newline + "Difficulty Selected: " + s3 );
         t1.setEditable(false);
         add(t1);
+       // b4 = new JButton();
+       // b4.setText("Your score is"+ MyScore); 
         b2 = new JButton();
         b2.setText("Return to Main Screen");
         b3 = new JButton();
@@ -53,10 +59,12 @@ public class GameOver extends JPanel implements ActionListener
         b3.setBounds(new Rectangle(500,300,150,50));
         add(b2);
         add(b3);
+        
     }
     
     public void actionPerformed(ActionEvent event)
     {
+        
         Object obj = event.getSource();
         if (obj == b2)
         {
