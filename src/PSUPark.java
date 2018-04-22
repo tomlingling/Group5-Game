@@ -59,7 +59,7 @@ public class PSUPark extends JPanel implements ActionListener
         
         if (game=="History"){
         JFrame question = new JFrame();
-        question.add(new History(p1, 0, "University Park", 0));
+        question.add(new History(p1,"PSUPark"));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -69,7 +69,7 @@ public class PSUPark extends JPanel implements ActionListener
         
         if (game=="Math"){
         JFrame question = new JFrame();
-        question.add(new Math(p1, "PSUPark"));
+        question.add(new Math(p1,"PSUPark"));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -79,7 +79,7 @@ public class PSUPark extends JPanel implements ActionListener
         
         if (game=="Geography"){
         JFrame question = new JFrame();
-        question.add(new Geography(p1));
+        question.add(new Geography(p1,"PSUPark"));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);

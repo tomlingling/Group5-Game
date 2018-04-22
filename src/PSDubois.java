@@ -59,7 +59,7 @@ public class PSDubois extends JPanel implements ActionListener
         
         if (game=="History"){
         JFrame question = new JFrame();
-        question.add(new History(p1, 0, "Penn State DuBois", 0));
+        question.add(new History(p1,"PSDubois"));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -79,7 +79,7 @@ public class PSDubois extends JPanel implements ActionListener
         
         if (game=="Geography"){
         JFrame question = new JFrame();
-        question.add(new Geography(p1));
+        question.add(new Geography(p1, "PSDubois"));
         setBackground(Color.darkGray);        
         setLayout(null);    
         question.setDefaultCloseOperation(DISPOSE_ON_CLOSE);

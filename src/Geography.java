@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 import javax.swing.JLabel;
+import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,90 +16,248 @@ import javax.swing.JLabel;
  *
  * @author Len
  */
-public class Geography extends JPanel 
+public class Geography extends JPanel implements ActionListener
 {
-   
     GameOptions p1;
-    JButton b1;
-    JButton g1 ;
-    JButton g2 ;
-    JButton g3 ;
-    JButton g4 ;
-    JButton g5 ;
-    JButton g6 ;
-    JButton g7 ;
-     /* 
-    JLabel label = new JLabel ("Geography Question 1");
-    JLabel label2 = new JLabel ("If you start from the Center of PA what location is these campus?");
+    String campus;
+
+    JButton question;
+    JButton ans1;
+    JButton ans2;
+    JButton ans3;
+    JButton close;
+
+    int wcampScore;
+    int altScore;
+    int berkScore;
+    int upScore;
+    int erieScore;
+    int dubScore;
     
-    JButton button1 = new JButton("North");
-    JButton button2 = new JButton("East");
-    JButton button3 = new JButton("West");
-    JButton button4 = new JButton("South");
-    JButton button5 = new JButton("Southeast");
-    JButton button6 = new JButton("Southwest");
     
-   public void actionperformed(ActionEvent event){
-       if (button1.isSelected()){
-           button1.setText("Wrong!");
-       }
-       if (button2.isSelected()){
-          button2.setText("Wrong!"); 
-       }
-      if (button3.isSelected()){
-           button3.setText("Wrong!");
-       }
-       if (button4.isSelected()){
-           button4.setText("Wrong!");
-       }
-       if (button5.isSelected()){
-           button5.setText("Wrong!");
-       }
-       if (button6.isSelected()){
-           button6.setText("Right!");
-       }
-     
-       \*    */
-   public Geography(GameOptions games){
-        super(); 
+   public Geography(GameOptions games, String campus)  {
+        super();
         p1 = games;
-        setBackground(Color.GREEN);
-        setLayout(null);
-        g1 = new JButton("If you start from the Center of PA what location is these campus?");
-        g1.setBounds(new Rectangle(525,30,300,35));
-        add(g1);
+        setBackground(Color.darkGray);
+        GridLayout mathPanel = new GridLayout(5,10);
+        setVisible(true);
+        this.campus = campus;   
+                
+        //-----Add question & answers based on campus selected-----
         
-        g2 = new JButton("North");
-        g2.setBounds(new Rectangle(525,150,300,35));
-        add(g2);
+        if (campus.matches("PSWorldCampus")) 
+        {
+            question = new JButton("How many students attend World Campus?");            
+            add(question);
+            
+            ans1 = new JButton("Don't know");
+            ans1.addActionListener(this);
+            add(ans1);
+            
+            ans2 = new JButton("Don't care");
+            ans2.addActionListener(this);
+            add(ans2);
+            
+            ans3 = new JButton("Why do you ask?");
+            ans3.addActionListener(this);
+            add(ans3);
+            
+            close = new JButton("Next Question");            
+            close.addActionListener(this);
+            add(close);
+        }
         
-        g3 = new JButton("West");
-        g3.setBounds(new Rectangle(525,250,300,35));
-        add(g3);
+        if (campus.matches("PSAltoona")) 
+        {
+            question = new JButton("Solve this equation: 12 x 12 =  ");            
+            add(question);
+            
+            ans1 = new JButton("24");
+            ans1.addActionListener(this);
+            add(ans1);
+            
+            ans2 = new JButton("144");
+            ans2.addActionListener(this);
+            add(ans2);
+            
+            ans3 = new JButton("1,728");
+            ans3.addActionListener(this);
+            add(ans3);
+            
+            close = new JButton("Next Question");            
+            close.addActionListener(this);
+            add(close);
+            
+        }
+        if (campus.matches("PSUPark")) 
+        {
+            question = new JButton("Solve the equation for x: 3x + 10 = 28");            
+            add(question);
+            
+            ans1 = new JButton("10");
+            ans1.addActionListener(this);
+            add(ans1);
+            
+            ans2 = new JButton("3.14");
+            ans2.addActionListener(this);
+            add(ans2);
+            
+            ans3 = new JButton("6");
+            ans3.addActionListener(this);
+            add(ans3);
+            
+            close = new JButton("Next Question");            
+            close.addActionListener(this);
+            add(close);
+        }
+        if (campus.matches("PSErie")) 
+        {
+            question = new JButton("If the sides of a triangle are 2 & 3, what is the hypotenuse?");            
+            add(question);
+            
+            ans1 = new JButton("3.6");
+            ans1.addActionListener(this);
+            add(ans1);
+            
+            ans2 = new JButton("4.1");
+            ans2.addActionListener(this);
+            add(ans2);
+            
+            ans3 = new JButton("3.2");
+            ans3.addActionListener(this);
+            add(ans3);
+            
+            close = new JButton("Next Question");            
+            close.addActionListener(this);
+            add(close);
+        }
+        if (campus.matches("PSBerks")) 
+        {
+            question = new JButton("Solve the equation for y:  ((y/2)*3)) + 4 = 13");            
+            add(question);
+            
+            ans1 = new JButton("3");
+            ans1.addActionListener(this);
+            add(ans1);
+            
+            ans2 = new JButton("9");
+            ans2.addActionListener(this);
+            add(ans2);
+            
+            ans3 = new JButton("6");
+            ans3.addActionListener(this);
+            add(ans3);
+            
+            close = new JButton("Next Question");            
+            close.addActionListener(this);
+            add(close);
+        }
+        if (campus.matches("PSDubois")) 
+        {
+            question = new JButton("Solve the equation:  1 - 1 = ");            
+            add(question);
+            
+            ans1 = new JButton("11");
+            ans1.addActionListener(this);
+            add(ans1);
+            
+            ans2 = new JButton("0");
+            ans2.addActionListener(this);
+            add(ans2);
+            
+            ans3 = new JButton("2?");
+            ans3.addActionListener(this);
+            add(ans3);
+            
+            close = new JButton("Next Question");            
+            close.addActionListener(this);
+            add(close);
+        }
         
-        g4 = new JButton("East");
-        g4.setBounds(new Rectangle(525,350,300,35));
-        add(g4);
+    }    
         
-        g5 = new JButton("South");
-        g5.setBounds(new Rectangle(525,450,300,35));
-        add(g5);
-        
-        g6 = new JButton("NorthEast");
-        g6.setBounds(new Rectangle(525,550,300,35));
-        add(g6);
-        
-        g7 = new JButton("NorthWest");
-        g7.setBounds(new Rectangle(525,650,300,35));
-        add(g7);
-   }
-           
-           
-   }       
-    /*  String getQuestion()
-{
-    String subject = "This will be a geography question.";
-    return subject;
-} */
-
-
+     
+        public void actionPerformed(ActionEvent event) 
+        {
+            Object obj = event.getSource();
+            if (campus.matches("PSWorldCampus"))
+            {                           
+                if (obj == ans2) {
+                ans2.setText("Right!");
+                ans2.setBackground(Color.GREEN);
+                wcampScore = 1;                                       
+                } else {                        
+                        ans2.setText("Wrong!!");
+                        ans2.setBackground(Color.RED);
+                        wcampScore = 0;
+                }             
+            }
+            if (campus.matches("PSAltoona"))
+            {                           
+                if (obj == ans2) {
+                ans2.setText("Right!");
+                ans2.setBackground(Color.GREEN);
+                altScore = 1;                                       
+                } else {                        
+                        ans2.setText("Wrong!!");
+                        ans2.setBackground(Color.RED);
+                        altScore = 0;
+                }             
+            }
+            if (campus.matches("PSUPark"))
+            {                           
+                if (obj == ans3) {
+                ans3.setText("Right!");
+                ans3.setBackground(Color.GREEN);
+                upScore = 1;                                       
+                } else {                        
+                        ans3.setText("Wrong!!");
+                        ans3.setBackground(Color.RED);
+                        upScore = 0;
+                }             
+            }
+            if (campus.matches("PSErie"))
+            {                           
+                if (obj == ans1) {
+                ans1.setText("Right!");
+                ans1.setBackground(Color.GREEN);
+                erieScore = 1;                                       
+                } else {                        
+                        ans1.setText("Wrong!!");
+                        ans1.setBackground(Color.RED);
+                        erieScore = 0;
+                }             
+            }
+            if (campus.matches("PSBerks"))
+            {                           
+                if (obj == ans3) {
+                ans3.setText("Right!");
+                ans3.setBackground(Color.GREEN);
+                berkScore = 1;                                       
+                } else {                        
+                        ans3.setText("Wrong!!");
+                        ans3.setBackground(Color.RED);
+                        berkScore = 0;
+                }             
+            }
+            if (campus.matches("PSDubois"))
+            {                           
+                if (obj == ans2) {
+                ans2.setText("Right!");
+                ans2.setBackground(Color.GREEN);
+                dubScore = 1;                                       
+                } else {                        
+                        ans2.setText("Wrong!!");
+                        ans2.setBackground(Color.RED);
+                        dubScore = 0;
+                }
+                
+            }
+            if (obj == close)
+            {
+                JFrame MyJFrame = (JFrame) SwingUtilities.getRoot(this);
+                MyJFrame.dispose();      
+            }
+        }
+    }    
+   
