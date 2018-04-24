@@ -38,18 +38,18 @@ public class History extends JPanel implements ActionListener {
         
         if (campus.matches("PSWorldCampus")) 
         {
-            question = new JButton("How many students attend World Campus?");            
+            question = new JButton("When was this campus found?");            
             add(question);
             
-            ans1 = new JButton("Don't know");
+            ans1 = new JButton("1900s");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("Don't care");
+            ans2 = new JButton("1800s");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("Why do you ask?");
+            ans3 = new JButton("2000s?");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -60,18 +60,18 @@ public class History extends JPanel implements ActionListener {
         
         if (campus.matches("PSAltoona")) 
         {
-            question = new JButton("Solve this equation: 12 x 12 =  ");            
+             question = new JButton("When was this campus found?");            
             add(question);
             
-            ans1 = new JButton("24");
+            ans1 = new JButton("1900s");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("144");
+            ans2 = new JButton("1800s");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("1,728");
+            ans3 = new JButton("2000s?");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -82,18 +82,18 @@ public class History extends JPanel implements ActionListener {
         }
         if (campus.matches("PSUPark")) 
         {
-            question = new JButton("Solve the equation for x: 3x + 10 = 28");            
+             question = new JButton("When was this campus found?");            
             add(question);
             
-            ans1 = new JButton("10");
+            ans1 = new JButton("1900s");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("3.14");
+            ans2 = new JButton("1800s");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("6");
+            ans3 = new JButton("2000s?");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -103,18 +103,18 @@ public class History extends JPanel implements ActionListener {
         }
         if (campus.matches("PSErie")) 
         {
-            question = new JButton("If the sides of a triangle are 2 & 3, what is the hypotenuse?");            
+            question = new JButton("When was this campus found?");            
             add(question);
             
-            ans1 = new JButton("3.6");
+            ans1 = new JButton("1900s");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("4.1");
+            ans2 = new JButton("1800s");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("3.2");
+            ans3 = new JButton("2000s?");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -124,18 +124,18 @@ public class History extends JPanel implements ActionListener {
         }
         if (campus.matches("PSBerks")) 
         {
-            question = new JButton("Solve the equation for y:  ((y/2)*3)) + 4 = 13");            
+            question = new JButton("When was this campus found?");            
             add(question);
             
-            ans1 = new JButton("3");
+            ans1 = new JButton("1900s");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("9");
+            ans2 = new JButton("1800s");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("6");
+            ans3 = new JButton("2000s?");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -145,18 +145,18 @@ public class History extends JPanel implements ActionListener {
         }
         if (campus.matches("PSDubois")) 
         {
-            question = new JButton("Solve the equation:  1 - 1 = ");            
+             question = new JButton("When was this campus found?");            
             add(question);
             
-            ans1 = new JButton("11");
+            ans1 = new JButton("1900s");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("0");
+            ans2 = new JButton("1800s");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("2?");
+            ans3 = new JButton("2000s?");
             ans3.addActionListener(this);
             add(ans3);
             
