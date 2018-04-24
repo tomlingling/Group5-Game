@@ -38,18 +38,18 @@ public class History extends JPanel implements ActionListener {
         
         if (campus.matches("PSWorldCampus")) 
         {
-            question = new JButton("When was this campus found?");            
+            question = new JButton("Who invented the Internet to make World Campus possible?");            
             add(question);
             
-            ans1 = new JButton("1900s");
+            ans1 = new JButton("Al Gore");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("1800s");
+            ans2 = new JButton("Robert Cerf");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("2000s?");
+            ans3 = new JButton("Vint Kahn");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -63,15 +63,15 @@ public class History extends JPanel implements ActionListener {
              question = new JButton("When was this campus found?");            
             add(question);
             
-            ans1 = new JButton("1900s");
+            ans1 = new JButton("1939");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("1800s");
+            ans2 = new JButton("1946");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("2000s?");
+            ans3 = new JButton("1947?");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -82,18 +82,18 @@ public class History extends JPanel implements ActionListener {
         }
         if (campus.matches("PSUPark")) 
         {
-             question = new JButton("When was this campus found?");            
+             question = new JButton("In what year did the Graduate School form?");            
             add(question);
             
-            ans1 = new JButton("1900s");
+            ans1 = new JButton("1883");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("1800s");
+            ans2 = new JButton("1922");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("2000s?");
+            ans3 = new JButton("1950");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -103,18 +103,18 @@ public class History extends JPanel implements ActionListener {
         }
         if (campus.matches("PSErie")) 
         {
-            question = new JButton("When was this campus found?");            
+            question = new JButton("This alumnus hit a home run in the 1987 World Series?");            
             add(question);
             
-            ans1 = new JButton("1900s");
+            ans1 = new JButton("Don Baylor");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("1800s");
+            ans2 = new JButton("Tom Herr");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("2000s?");
+            ans3 = new JButton("Tom Lawless");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -124,18 +124,18 @@ public class History extends JPanel implements ActionListener {
         }
         if (campus.matches("PSBerks")) 
         {
-            question = new JButton("When was this campus found?");            
+            question = new JButton("What was Penn State Berks originally known as?");            
             add(question);
             
-            ans1 = new JButton("1900s");
+            ans1 = new JButton("Penn State Reading");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("1800s");
+            ans2 = new JButton("Reading Textiles Institute");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("2000s?");
+            ans3 = new JButton("Wyomissing Polytechnic Institute");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -145,18 +145,18 @@ public class History extends JPanel implements ActionListener {
         }
         if (campus.matches("PSDubois")) 
         {
-             question = new JButton("When was this campus found?");            
+             question = new JButton("When was the first summer semester offered?");            
             add(question);
             
-            ans1 = new JButton("1900s");
+            ans1 = new JButton("1935");
             ans1.addActionListener(this);
             add(ans1);
             
-            ans2 = new JButton("1800s");
+            ans2 = new JButton("1942");
             ans2.addActionListener(this);
             add(ans2);
             
-            ans3 = new JButton("2000s?");
+            ans3 = new JButton("1945");
             ans3.addActionListener(this);
             add(ans3);
             
@@ -173,73 +173,73 @@ public class History extends JPanel implements ActionListener {
             Object obj = event.getSource();
             if (campus.matches("PSWorldCampus"))
             {                           
-                if (obj == ans2) {
-                ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
+                if (obj == ans1) {
+                close.setText("Right! - Next Question?");
+                close.setBackground(Color.GREEN);
                 wcampScore = 1;                                       
                 } else {                        
-                        ans2.setText("Wrong!!");
-                        ans2.setBackground(Color.RED);
+                        close.setText("Wrong!! - Next Question?");
+                        close.setBackground(Color.RED);
                         wcampScore = 0;
                 }             
             }
             if (campus.matches("PSAltoona"))
             {                           
-                if (obj == ans2) {
-                ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
+                if (obj == ans1) {
+                close.setText("Right! - Next Question?");
+                close.setBackground(Color.GREEN);
                 altScore = 1;                                       
                 } else {                        
-                        ans2.setText("Wrong!!");
-                        ans2.setBackground(Color.RED);
+                        close.setText("Wrong!! - Next Question?");
+                        close.setBackground(Color.RED);
                         altScore = 0;
                 }             
             }
             if (campus.matches("PSUPark"))
             {                           
-                if (obj == ans3) {
-                ans3.setText("Right!");
-                ans3.setBackground(Color.GREEN);
+                if (obj == ans2) {
+                close.setText("Right! - Next Question?");
+                close.setBackground(Color.GREEN);
                 upScore = 1;                                       
                 } else {                        
-                        ans3.setText("Wrong!!");
-                        ans3.setBackground(Color.RED);
+                        close.setText("Wrong!! - Next Question?");
+                        close.setBackground(Color.RED);
                         upScore = 0;
                 }             
             }
             if (campus.matches("PSErie"))
             {                           
-                if (obj == ans1) {
-                ans1.setText("Right!");
-                ans1.setBackground(Color.GREEN);
+                if (obj == ans3) {
+                close.setText("Right! - Next Question?");
+                close.setBackground(Color.GREEN);
                 erieScore = 1;                                       
                 } else {                        
-                        ans1.setText("Wrong!!");
-                        ans1.setBackground(Color.RED);
+                        close.setText("Wrong!! - Next Question?");
+                        close.setBackground(Color.RED);
                         erieScore = 0;
                 }             
             }
             if (campus.matches("PSBerks"))
             {                           
                 if (obj == ans3) {
-                ans3.setText("Right!");
-                ans3.setBackground(Color.GREEN);
+                close.setText("Right! - Next Question?");
+                close.setBackground(Color.GREEN);
                 berkScore = 1;                                       
                 } else {                        
-                        ans3.setText("Wrong!!");
-                        ans3.setBackground(Color.RED);
+                        close.setText("Wrong!! - Next Question?");
+                        close.setBackground(Color.RED);
                         berkScore = 0;
                 }             
             }
             if (campus.matches("PSDubois"))
             {                           
                 if (obj == ans2) {
-                ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
+                close.setText("Right! - Next Question?");
+                close.setBackground(Color.GREEN);
                 dubScore = 1;                                       
                 } else {                        
-                        ans2.setText("Wrong!!");
-                        ans2.setBackground(Color.RED);
+                        close.setText("Wrong!! - Next Question?");
+                        close.setBackground(Color.RED);
                         dubScore = 0;
                 }
                 
