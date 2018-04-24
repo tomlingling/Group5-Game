@@ -172,8 +172,8 @@ public class Geography extends JPanel implements ActionListener {
         Object obj = event.getSource();
         if (campus.matches("PSWorldCampus")) {
             if (obj == ans3) {
-                ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
+                ans3.setText("Right!");
+                ans3.setBackground(Color.GREEN);
                 wcampScore = 1;
             } else {
                 ans2.setText("Wrong!!");
@@ -183,8 +183,8 @@ public class Geography extends JPanel implements ActionListener {
         }
         if (campus.matches("PSAltoona")) {
             if (obj == ans1) {
-                ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
+                ans1.setText("Right!");
+                ans1.setBackground(Color.GREEN);
                 altScore = 1;
             } else {
                 ans2.setText("Wrong!!");
@@ -194,8 +194,8 @@ public class Geography extends JPanel implements ActionListener {
         }
         if (campus.matches("PSUPark")) {
             if (obj == ans1) {
-                ans3.setText("Right!");
-                ans3.setBackground(Color.GREEN);
+                ans1.setText("Right!");
+                ans1.setBackground(Color.GREEN);
                 upScore = 1;
             } else {
                 ans3.setText("Wrong!!");
@@ -205,8 +205,8 @@ public class Geography extends JPanel implements ActionListener {
         }
         if (campus.matches("PSErie")) {
             if (obj == ans3) {
-                ans1.setText("Right!");
-                ans1.setBackground(Color.GREEN);
+                ans3.setText("Right!");
+                ans3.setBackground(Color.GREEN);
                 erieScore = 1;
             } else {
                 ans1.setText("Wrong!!");
@@ -227,8 +227,8 @@ public class Geography extends JPanel implements ActionListener {
         }
         if (campus.matches("PSDubois")) {
             if (obj == ans1) {
-                ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
+                ans1.setText("Right!");
+                ans1.setBackground(Color.GREEN);
                 dubScore = 1;
             } else {
                 ans2.setText("Wrong!!");
