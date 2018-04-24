@@ -55,7 +55,7 @@ public class Geography extends JPanel implements ActionListener {
             ans2.addActionListener(this);
             add(ans2);
 
-            ans3 = new JButton("West");
+            ans3 = new JButton("The interwebs...you can ping it to PA silly!");
             ans3.addActionListener(this);
             add(ans3);
 
@@ -65,18 +65,18 @@ public class Geography extends JPanel implements ActionListener {
         }
 
         if (campus.matches("PSAltoona")) {
-            question = new JButton("From the Center of the PA where is this campus?");
+            question = new JButton("Where do some campus buildings reside in Altoona?");
             add(question);
 
-            ans1 = new JButton("North");
+            ans1 = new JButton("Downtown");
             ans1.addActionListener(this);
             add(ans1);
 
-            ans2 = new JButton("East");
+            ans2 = new JButton("Uptown");
             ans2.addActionListener(this);
             add(ans2);
 
-            ans3 = new JButton("West");
+            ans3 = new JButton("City Center");
             ans3.addActionListener(this);
             add(ans3);
 
@@ -86,18 +86,18 @@ public class Geography extends JPanel implements ActionListener {
 
         }
         if (campus.matches("PSUPark")) {
-            question = new JButton("From the Center of the PA where is this campus?");
+            question = new JButton("What climate is this campus have from May to August?");
             add(question);
 
-            ans1 = new JButton("North");
+            ans1 = new JButton("humid subtropical");
             ans1.addActionListener(this);
             add(ans1);
 
-            ans2 = new JButton("East");
+            ans2 = new JButton("Tropical Monsoon");
             ans2.addActionListener(this);
             add(ans2);
 
-            ans3 = new JButton("West");
+            ans3 = new JButton("Wet Tropical");
             ans3.addActionListener(this);
             add(ans3);
 
@@ -106,18 +106,18 @@ public class Geography extends JPanel implements ActionListener {
             add(close);
         }
         if (campus.matches("PSErie")) {
-            question = new JButton("From the Center of the PA where is this campus?");
+            question = new JButton("What Great Lake is by this campus??");
             add(question);
 
-            ans1 = new JButton("North");
+            ans1 = new JButton("Superior");
             ans1.addActionListener(this);
             add(ans1);
 
-            ans2 = new JButton("East");
+            ans2 = new JButton("Ontario");
             ans2.addActionListener(this);
             add(ans2);
 
-            ans3 = new JButton("West");
+            ans3 = new JButton("Erie");
             ans3.addActionListener(this);
             add(ans3);
 
@@ -126,18 +126,18 @@ public class Geography extends JPanel implements ActionListener {
             add(close);
         }
         if (campus.matches("PSBerks")) {
-            question = new JButton("From the Center of the PA where is this campus?");
+            question = new JButton("What tree is common in this area?");
             add(question);
 
-            ans1 = new JButton("North");
+            ans1 = new JButton("Red Oak");
             ans1.addActionListener(this);
             add(ans1);
 
-            ans2 = new JButton("East");
+            ans2 = new JButton("Cherry Blossom");
             ans2.addActionListener(this);
             add(ans2);
 
-            ans3 = new JButton("West");
+            ans3 = new JButton("Occidentalis");
             ans3.addActionListener(this);
             add(ans3);
 
@@ -146,18 +146,18 @@ public class Geography extends JPanel implements ActionListener {
             add(close);
         }
         if (campus.matches("PSDubois")) {
-            question = new JButton("From the Center of the PA where is this campus?");
+            question = new JButton("How many Square Miles of Dubois is water?");
             add(question);
 
-            ans1 = new JButton("North");
+            ans1 = new JButton(".04");
             ans1.addActionListener(this);
             add(ans1);
 
-            ans2 = new JButton("East");
+            ans2 = new JButton("1");
             ans2.addActionListener(this);
             add(ans2);
 
-            ans3 = new JButton("West");
+            ans3 = new JButton("10");
             ans3.addActionListener(this);
             add(ans3);
 
@@ -171,9 +171,9 @@ public class Geography extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         Object obj = event.getSource();
         if (campus.matches("PSWorldCampus")) {
-            if (obj == ans2) {
-                ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
+            if (obj == ans3) {
+                ans3.setText("Right!");
+                ans3.setBackground(Color.GREEN);
                 wcampScore = 1;
             } else {
                 ans2.setText("Wrong!!");
@@ -182,9 +182,9 @@ public class Geography extends JPanel implements ActionListener {
             }
         }
         if (campus.matches("PSAltoona")) {
-            if (obj == ans2) {
-                ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
+            if (obj == ans1) {
+                ans1.setText("Right!");
+                ans1.setBackground(Color.GREEN);
                 altScore = 1;
             } else {
                 ans2.setText("Wrong!!");
@@ -193,9 +193,9 @@ public class Geography extends JPanel implements ActionListener {
             }
         }
         if (campus.matches("PSUPark")) {
-            if (obj == ans3) {
-                ans3.setText("Right!");
-                ans3.setBackground(Color.GREEN);
+            if (obj == ans1) {
+                ans1.setText("Right!");
+                ans1.setBackground(Color.GREEN);
                 upScore = 1;
             } else {
                 ans3.setText("Wrong!!");
@@ -204,9 +204,9 @@ public class Geography extends JPanel implements ActionListener {
             }
         }
         if (campus.matches("PSErie")) {
-            if (obj == ans1) {
-                ans1.setText("Right!");
-                ans1.setBackground(Color.GREEN);
+            if (obj == ans3) {
+                ans3.setText("Right!");
+                ans3.setBackground(Color.GREEN);
                 erieScore = 1;
             } else {
                 ans1.setText("Wrong!!");
@@ -226,9 +226,9 @@ public class Geography extends JPanel implements ActionListener {
             }
         }
         if (campus.matches("PSDubois")) {
-            if (obj == ans2) {
-                ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
+            if (obj == ans1) {
+                ans1.setText("Right!");
+                ans1.setBackground(Color.GREEN);
                 dubScore = 1;
             } else {
                 ans2.setText("Wrong!!");
