@@ -166,66 +166,66 @@ public class History extends JPanel implements ActionListener {
             if (obj == ans1) {
                 ans1.setText("Right!");
                 ans1.setBackground(Color.GREEN);
-                wcampScore = 1;
+
             } else {
                 ans1.setText("Wrong!!");
                 ans1.setBackground(Color.RED);
-                wcampScore = 0;
+
             }
         }
         if (campus.matches("PSAltoona")) {
             if (obj == ans1) {
                 ans1.setText("Right!");
                 ans1.setBackground(Color.GREEN);
-                altScore = 1;
+
             } else {
                 ans1.setText("Wrong!!");
                 ans1.setBackground(Color.RED);
-                altScore = 0;
+
             }
         }
         if (campus.matches("PSUPark")) {
             if (obj == ans2) {
                 ans2.setText("Right!");
                 ans2.setBackground(Color.GREEN);
-                upScore = 1;
+
             } else {
                 ans2.setText("Wrong!!");
                 ans2.setBackground(Color.RED);
-                upScore = 0;
+
             }
         }
         if (campus.matches("PSErie")) {
             if (obj == ans3) {
                 ans3.setText("Right!");
                 ans3.setBackground(Color.GREEN);
-                erieScore = 1;
+
             } else {
                 ans3.setText("Wrong!!");
                 ans3.setBackground(Color.RED);
-                erieScore = 0;
+
             }
         }
         if (campus.matches("PSBerks")) {
             if (obj == ans3) {
                 ans3.setText("Right!");
                 ans3.setBackground(Color.GREEN);
-                berkScore = 1;
+
             } else {
                 ans3.setText("Wrong!!");
                 ans3.setBackground(Color.RED);;
-                berkScore = 0;
+
             }
         }
         if (campus.matches("PSDubois")) {
             if (obj == ans2) {
                 ans2.setText("Right!");
                 ans2.setBackground(Color.GREEN);
-                dubScore = 1;
+
             } else {
                 ans2.setText("Wrong!!");
                 ans2.setBackground(Color.RED);;
-                dubScore = 0;
+
             }
 
         }
