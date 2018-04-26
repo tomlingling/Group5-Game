@@ -71,7 +71,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         difficulty.setBounds(new Rectangle(900,30,270,35));
         add(difficulty);
         //----Go to Game Over---
-        gameOver = new JButton("Check Your Score");
+        gameOver = new JButton("Click to continue.");
         gameOver.setBackground(Color.green);
         gameOver.setBounds(new Rectangle(1000,280,170,170));
         gameOver.setVisible(false);
@@ -136,7 +136,7 @@ public class CampusMapPanel extends JPanel implements ActionListener
         //----keep the timer moving-----------
   	if (difficultySelected == ("Easy"))
         {	
-            delay = 5000; //milliseconds
+            delay = 2000; //milliseconds
             tim = new Timer(delay, this);
         }
         else if (difficultySelected == ("Medium"))
