@@ -10,7 +10,6 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-// This is a place holder until we know when to use this text screen in our game
 
 public class YouLose extends JPanel implements ActionListener
 {

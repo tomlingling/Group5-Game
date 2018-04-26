@@ -16,14 +16,7 @@ public class Math extends JPanel implements ActionListener {
     JButton ans1;
     JButton ans2;
     JButton ans3;
-    JButton close;
-    
-    int wcampScore;
-    int altScore;    
-    int berkScore;
-    int upScore;
-    int erieScore;
-    int dubScore;
+    JButton close;   
     
     public Math(GameOptions games, String campus) 
     {
@@ -175,72 +168,60 @@ public class Math extends JPanel implements ActionListener {
             {                           
                 if (obj == ans2) {
                 ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
-                wcampScore = 1;                                       
+                ans2.setBackground(Color.GREEN);                                                      
                 } else {                        
                         ans2.setText("Wrong!!");
-                        ans2.setBackground(Color.RED);
-                        wcampScore = 0;
+                        ans2.setBackground(Color.RED);                        
                 }             
             }
             if (campus.matches("PSAltoona"))
             {                           
                 if (obj == ans2) {
                 ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
-                altScore = 1;                                       
+                ans2.setBackground(Color.GREEN);                                                   
                 } else {                        
                         ans2.setText("Wrong!!");
-                        ans2.setBackground(Color.RED);
-                        altScore = 0;
+                        ans2.setBackground(Color.RED);                       
                 }             
             }
             if (campus.matches("PSUPark"))
             {                           
                 if (obj == ans3) {
                 ans3.setText("Right!");
-                ans3.setBackground(Color.GREEN);
-                upScore = 1;                                       
+                ans3.setBackground(Color.GREEN);                                                    
                 } else {                        
                         ans3.setText("Wrong!!");
-                        ans3.setBackground(Color.RED);
-                        upScore = 0;
+                        ans3.setBackground(Color.RED);                        
                 }             
             }
             if (campus.matches("PSErie"))
             {                           
                 if (obj == ans1) {
                 ans1.setText("Right!");
-                ans1.setBackground(Color.GREEN);
-                erieScore = 1;                                       
+                ans1.setBackground(Color.GREEN);                                                      
                 } else {                        
                         ans1.setText("Wrong!!");
-                        ans1.setBackground(Color.RED);
-                        erieScore = 0;
+                        ans1.setBackground(Color.RED);                        
                 }             
             }
             if (campus.matches("PSBerks"))
             {                           
                 if (obj == ans3) {
                 ans3.setText("Right!");
-                ans3.setBackground(Color.GREEN);
-                berkScore = 1;                                       
+                ans3.setBackground(Color.GREEN);                                                
                 } else {                        
                         ans3.setText("Wrong!!");
-                        ans3.setBackground(Color.RED);
-                        berkScore = 0;
+                        ans3.setBackground(Color.RED);                       
                 }             
             }
             if (campus.matches("PSDubois"))
             {                           
                 if (obj == ans2) {
                 ans2.setText("Right!");
-                ans2.setBackground(Color.GREEN);
-                dubScore = 1;                                       
+                ans2.setBackground(Color.GREEN);                                                      
                 } else {                        
                         ans2.setText("Wrong!!");
-                        ans2.setBackground(Color.RED);
-                        dubScore = 0;
+                        ans2.setBackground(Color.RED);                        
                 }
                 
             }
