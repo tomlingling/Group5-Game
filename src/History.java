@@ -17,14 +17,7 @@ public class History extends JPanel implements ActionListener {
     JButton ans2;
     JButton ans3;
     JButton close;
-
-    int wcampScore;
-    int altScore;
-    int berkScore;
-    int upScore;
-    int erieScore;
-    int dubScore;
-
+   
     public History(GameOptions games, String campus) {
 
         super();

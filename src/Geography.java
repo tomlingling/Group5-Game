@@ -26,14 +26,7 @@ public class Geography extends JPanel implements ActionListener {
     JButton ans2;
     JButton ans3;
     JButton close;
-
-    int wcampScore;
-    int altScore;
-    int berkScore;
-    int upScore;
-    int erieScore;
-    int dubScore;
-
+    
     public Geography(GameOptions games, String campus) {
         super();
         p1 = games;
@@ -176,8 +169,8 @@ public class Geography extends JPanel implements ActionListener {
                 ans3.setBackground(Color.GREEN);
 
             } else {
-                ans2.setText("Wrong!!");
-                ans2.setBackground(Color.RED);
+                ans3.setText("Wrong!!");
+                ans3.setBackground(Color.RED);
 
             }
         }
@@ -187,8 +180,8 @@ public class Geography extends JPanel implements ActionListener {
                 ans1.setBackground(Color.GREEN);
 
             } else {
-                ans2.setText("Wrong!!");
-                ans2.setBackground(Color.RED);
+                ans1.setText("Wrong!!");
+                ans1.setBackground(Color.RED);
 
             }
         }
@@ -198,8 +191,8 @@ public class Geography extends JPanel implements ActionListener {
                 ans1.setBackground(Color.GREEN);
 
             } else {
-                ans3.setText("Wrong!!");
-                ans3.setBackground(Color.RED);
+                ans1.setText("Wrong!!");
+                ans1.setBackground(Color.RED);
 
             }
         }
@@ -209,8 +202,8 @@ public class Geography extends JPanel implements ActionListener {
                 ans3.setBackground(Color.GREEN);
 
             } else {
-                ans1.setText("Wrong!!");
-                ans1.setBackground(Color.RED);
+                ans3.setText("Wrong!!");
+                ans3.setBackground(Color.RED);
 
             }
         }
@@ -231,8 +224,8 @@ public class Geography extends JPanel implements ActionListener {
                 ans1.setBackground(Color.GREEN);
 
             } else {
-                ans2.setText("Wrong!!");
-                ans2.setBackground(Color.RED);
+                ans1.setText("Wrong!!");
+                ans1.setBackground(Color.RED);
 
             }
 
