@@ -5,10 +5,6 @@
  * Leonard Cadet
  */
 
-/**
- *
- * @author Mikee
- */
 
 import java.awt.*;
 import javax.swing.*;
